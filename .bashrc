@@ -29,3 +29,6 @@ alias ls='ls -F --color=always'
 alias Research='cd ~/Dropbox/GT\ Documents/2011-2012/Spring\ 2012/Research'
 alias AUR='sudo pacman -U'
 alias rtfn='elinks https://www.archlinux.org/feeds/news/'
+alias gadd="git add"
+alias gcommit="git commit"
+alias gpush="git push"
