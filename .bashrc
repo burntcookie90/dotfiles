@@ -33,3 +33,10 @@ alias gadd="git add"
 alias gcommit="git commit"
 alias gpush="git push -u origin master"
 complete -cf sudo
+complete -cf man
+complete -cf Install
+complete -cf Remove
+complete -cf Upgrade
+complete -cf Search
+complete -cf gadd
+complete -cf gcommit
