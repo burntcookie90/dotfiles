@@ -32,3 +32,4 @@ alias rtfn='elinks https://www.archlinux.org/feeds/news/'
 alias gadd="git add"
 alias gcommit="git commit"
 alias gpush="git push -u origin master"
+complete -cf sudo
