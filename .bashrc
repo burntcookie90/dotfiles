@@ -4,6 +4,8 @@ PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] '
 HISTSIZE=100000
 HISTFILESIZE=100000
 export PATH=$PATH:/opt/android-sdk/platform-tools/
+export EDITOR=vim
+export PATH=$PATH:/opt/android-sdk/tools/
 export USE_CCACHE=1
 export ECLIPSE_HOME=/usr/share/eclipse
 export PATH=$PATH:$ECLIPSE_HOME
@@ -32,6 +34,7 @@ alias rtfn='elinks https://www.archlinux.org/feeds/news/'
 alias gadd="git add"
 alias gcommit="git commit"
 alias gpush="git push -u origin master"
+alias gpull="git pull origin master"
 complete -cf sudo
 complete -cf man
 complete -cf Install
@@ -40,3 +43,4 @@ complete -cf Upgrade
 complete -cf Search
 complete -cf gadd
 complete -cf gcommit
+complete -cf gpull
