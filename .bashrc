@@ -44,3 +44,4 @@ complete -cf Search
 complete -cf gadd
 complete -cf gcommit
 complete -cf gpull
+alias wifi="wicd-curses"
