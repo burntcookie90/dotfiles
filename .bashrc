@@ -45,3 +45,4 @@ complete -cf gadd
 complete -cf gcommit
 complete -cf gpull
 alias wifi="wicd-curses"
+alias grep='grep --color=auto'
