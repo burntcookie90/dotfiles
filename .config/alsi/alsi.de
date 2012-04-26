@@ -1,0 +1,13 @@
+#!/usr/bin/perl
+
+# 'Process name' => 'Desktop Environment name'
+
+my $desktop_environments =
+{
+            'xfce4-session' => 'XFCE4',
+            'xfwm4'         => 'XFCE4',
+            'lxsession'     => 'LXDE',
+            'gnome-session' => 'GNOME',
+            'ksmserver'     => 'KDE',
+            'kdm'           => 'KDE',
+};
