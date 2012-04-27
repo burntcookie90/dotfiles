@@ -1,8 +1,11 @@
 alsi -u
 command fortune
-PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] '
+PS1='\[\e[0;32m\]\u@\h\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] '
 HISTSIZE=100000
 HISTFILESIZE=100000
+export HISTCONTROL=ignoreboth
+export HISTIGNORE='history*'
+export PROMPT_COMMAND='history -a;echo -en "\e]2;";history 1|sed "s/^[ \t]*[0-9]\{1,\}  //g";echo -en "\e\\";'
 export PATH=$PATH:/opt/android-sdk/platform-tools/
 export EDITOR=vim
 export PATH=$PATH:/opt/android-sdk/tools/
