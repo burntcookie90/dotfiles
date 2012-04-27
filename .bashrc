@@ -1,5 +1,5 @@
 alsi -u
-command fortune
+sensors | grep temp1
 PS1='\[\e[0;32m\]\u@\h\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] '
 HISTSIZE=100000
 HISTFILESIZE=100000
@@ -49,3 +49,7 @@ complete -cf gcommit
 complete -cf gpull
 alias wifi="wicd-curses"
 alias grep='grep --color=auto'
+alias eclim_2200="eclimd -f ~/.eclimrc1"
+alias conservative="sh ~/cpugov_conservative.sh"
+alias performance="sh ~/cpugov_perf.sh"
+alias ondemand="sh ~/cpugov_ondemand.sh"
