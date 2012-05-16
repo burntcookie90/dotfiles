@@ -14,12 +14,12 @@ fi
 
 xsetroot -cursor_name left_ptr
 case $1 in
-	xmonad)
-		exec ck-launch-session dbus-launch xmonad
-		#set the cursor
-		;;
 	xfce4)
-		exec ck-launch-session dbus-launch startxfce4
+		exec dbus-launch  startxfce4
+		;;
+	xmonad)
+		exec bus-launch xmonad
+		#set the cursor
 		;;
 #	*)
 #		exec $DEFAULT_SESSION

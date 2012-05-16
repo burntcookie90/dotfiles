@@ -53,3 +53,5 @@ alias eclim_2200="eclimd -f ~/.eclimrc1"
 alias conservative="sh ~/cpugov_conservative.sh"
 alias performance="sh ~/cpugov_perf.sh"
 alias ondemand="sh ~/cpugov_ondemand.sh"
+alias transmission="transmission-cli -b -er -u 5"
+complete -cf transmission
