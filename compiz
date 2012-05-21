@@ -1,0 +1,115 @@
+[shift]
+s0_ground_color1 = #b3b3b3cc
+s0_ground_color2 = #b3b3b300
+
+[scale]
+as_key_bindings_toggle = true
+as_button_bindings_toggle = true
+as_initiate_edge = 
+as_initiate_key = <Super>w
+as_initiate_all_key = <Super>a
+s0_spacing = 68
+s0_speed = 5.077900
+s0_timestep = 0.100000
+s0_opacity = 91
+s0_overlay_icon = 0
+s0_hover_time = 586
+
+[fade]
+s0_window_match = any & !(title=notify-osd)
+s0_fullscreen_visual_bell = true
+
+[decoration]
+as_shadow_radius = 0.100000
+as_shadow_opacity = 0.010000
+as_command = emerald --replace
+
+[thumbnail]
+s0_thumb_size = 295
+s0_thumb_color = #0000007f
+
+[ezoom]
+s0_minimum_zoom = 0.126000
+s0_scale_mouse = true
+s0_hide_original_mouse = true
+s0_follow_focus_delay = 0
+
+[place]
+s0_mode = 2
+
+[expo]
+as_expo_edge = BottomLeft
+as_zoom_time = 0.216900
+
+[scaleaddon]
+s0_title_size = 13
+
+[wall]
+as_preview_timeout = 0.113900
+as_slide_duration = 0.095800
+as_left_key = <Shift><Alt>a
+as_right_key = <Shift><Alt>d
+as_up_key = <Shift><Alt>w
+as_down_key = <Shift><Alt>s
+s0_edgeflip_move = false
+
+[blur]
+s0_alpha_blur_match = 
+
+[animation]
+s0_open_effects = animation:Glide 2;animation:None;animation:Fade;
+s0_open_durations = 120;80;80;
+s0_open_matches = ((type=Normal | Unknown) | name=sun-awt-X11-XFramePeer | name=sun-awt-X11-XDialogPeer) & !(role=toolTipTip | role=qtooltip_label) & !(type=Normal & override_redirect=1) & !(name=gnome-screensaver);(type=Menu | PopupMenu | DropdownMenu | Combo | Dialog | ModalDialog | Normal);(type=Tooltip | Notification | Utility) & !(name=compiz) & !(title=notify-osd);
+s0_close_effects = animation:Glide2;animation:Fade;animation:None;
+s0_close_durations = 120;80;50;
+s0_close_matches = ((type=Normal | Unknown) | name=sun-awt-X11-XFramePeer | name=sun-awt-X11-XDialogPeer) & !(role=toolTipTip | role=qtooltip_label) & !(type=Normal & override_redirect=1) & !(name=gnome-screensaver) & !(name=gnome-screenshot);(type=Menu | PopupMenu | DropdownMenu | Combo | Dialog | ModalDialog | Normal);(type=Tooltip | Notification | Utility) & !(name=compiz) & !(title=notify-osd);
+s0_minimize_effects = animation:Zoom;
+s0_minimize_durations = 220;
+s0_focus_effects = animation:Fade;
+s0_focus_durations = 150;
+s0_glide2_away_position = -0.100000
+s0_glide2_away_angle = 0.000000
+s0_zoom_springiness = 0.080000
+s0_time_step = 16
+
+[grid]
+as_put_center_key = <Super>k
+as_put_left_key = <Super>j
+as_put_right_key = <Super>l
+as_put_top_key = <Super>i
+as_put_bottom_key = <Super>comma
+as_put_topleft_key = <Super>u
+as_put_topright_key = <Super>o
+as_put_bottomleft_key = <Super>m
+as_put_bottomright_key = <Super>period
+
+[commands]
+as_run_command0_key = <Shift><Alt>1
+
+[maximumize]
+as_ignore_overlapping = true
+as_trigger_max_key = <Alt>Up
+
+[core]
+as_active_plugins = core;mousepoll;resize;move;resizeinfo;decoration;fadedesktop;thumbnail;screenshot;place;expo;png;switcher;wall;grid;titleinfo;scale;
+as_minimize_window_key = <Super>Down
+as_show_desktop_key = <Super>d
+as_toggle_window_maximized_key = <Alt>Return
+as_toggle_window_shaded_key = <Super>s
+s0_hsize = 3
+s0_vsize = 2
+s0_outputs = 1600x900+0+0;
+s0_focus_prevention_match = !(class=Polkit-gnome-authentication-agent-1)
+
+[staticswitcher]
+s0_auto_change_vp = true
+s0_popup_delay = 0.200000
+s0_mouse_select = true
+s0_saturation = 100
+s0_brightness = 100
+s0_mipmap = false
+s0_highlight_mode = 0
+
+[colorfilter]
+s0_filters = negative;negative-green;blueish-filter;sepia;grayscale;deuteranopia;protanopia;
+
