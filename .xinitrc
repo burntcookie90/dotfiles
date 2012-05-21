@@ -18,7 +18,7 @@ case $1 in
 		exec dbus-launch  startxfce4
 		;;
 	xmonad)
-		exec bus-launch xmonad
+		exec dbus-launch xmonad
 		#set the cursor
 		;;
 #	*)
