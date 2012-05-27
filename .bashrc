@@ -55,3 +55,4 @@ alias performance="sh ~/cpugov_perf.sh"
 alias ondemand="sh ~/cpugov_ondemand.sh"
 alias transmission="transmission-cli -b -er -u 5"
 complete -cf transmission
+alias youtube-mp3="youtube-dl --extract-audio --audio-format mp3 --audio-quality 320k"
