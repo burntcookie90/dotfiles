@@ -43,9 +43,6 @@ complete -cf Install
 complete -cf Remove
 complete -cf Upgrade
 complete -cf Search
-complete -cf gadd
-complete -cf gcommit
-complete -cf gpull
 alias wifi="wicd-curses"
 alias grep='grep --color=auto'
 alias eclim_2200="eclimd -f ~/.eclimrc1"
