@@ -1,17 +1,17 @@
-Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
-       , bgColor = "black"
-       , fgColor = "grey"
-       , position = Top
-       , lowerOnStart = True
-       , commands = [ Run Network "eth0" ["-L","0","-H","32","--normal","green","--high","red"] 10
-		    , Run Network "wlan0" ["-L","0","-H","32","--normal","green","--high","red"] 10
-                    , Run Cpu ["-L","3","-H","50","--normal","green","--high","red"] 10
-                    , Run Memory ["-t","Mem: <usedratio>%"] 10
-                    , Run Swap [] 10
-                    , Run Com "uname" ["-s","-r"] "" 36000
-                    , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
-		    ]
-       , sepChar = "%"
-       , alignSep = "}{"
-       , template = "%cpu% | %memory% * %swap% | %eth0% - %wlan0% }{ <fc=#ee9a00>%date%</fc>| %uname%"
-       }
+Config { font = "xft:Bitstream Vera Sans Mono:size=9:bold:antialias=true"  
+     , bgColor = "#000000"  
+     , fgColor = "grey"  
+     , position = Static { xpos = 0 , ypos = 0, width = 1290, height = 16 }  
+     , commands = [ Run Cpu ["-L","3","-H","50","--normal","green","--high","red"] 10  
+             , Run Network "wlan0" ["-L","0","-H","70","--normal","green","--high","red"] 10   
+			 , Run Com "/home/vishnu/battery.sh" [] "battery" 10
+             , Run Memory ["-t","Mem: <usedratio>%"] 10  
+             , Run Com "/home/vishnu/cputemp.sh" [] "temp" 10  
+           , Run Date "%a %b %_d %l:%M" "date" 10  
+             , Run Com "/home/vishnu/volume.sh" [] "volume" 10  
+           , Run StdinReader  
+           ]  
+     , sepChar = "%"  
+     , alignSep = "}{"  
+     , template = " %StdinReader%}{ <fc=grey>Batt:%battery% | %cpu%</fc> <fc=grey> | %memory% | %temp% C | %wlan0%</fc> | Vol: <fc=green>%volume%</fc> | <fc=#ee9a00>%date%</fc> |"  
+     }  
