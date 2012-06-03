@@ -7,7 +7,7 @@ Config { font = "xft:Bitstream Vera Sans Mono:size=9:bold:antialias=true"
 			 , Run Com "/home/vishnu/battery.sh" [] "battery" 10
              , Run Memory ["-t","Mem: <usedratio>%"] 10  
              , Run Com "/home/vishnu/cputemp.sh" [] "temp" 10  
-           , Run Date "%a %b %_d %l:%M" "date" 10  
+           , Run Com "/home/vishnu/date.sh" [] "date" 10  
              , Run Com "/home/vishnu/volume.sh" [] "volume" 10  
            , Run StdinReader  
            ]  
