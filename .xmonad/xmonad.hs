@@ -11,6 +11,7 @@ import XMonad
 import Data.Monoid
 import System.Exit
 import XMonad.Hooks.DynamicLog
+import XMonad.Hooks.EwmhDesktops
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 
@@ -120,6 +121,14 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 	--raise volume
 	, ((0              , 0x1008ff13), spawn "amixer set Master 2%+")
 
+	--music play/pause
+	, ((0			   , 0x1008ff14), spawn "mpc toggle")
+
+	--cmus prev
+	, ((0			   , 0x1008ff16), spawn "mpc prev")
+
+	--cmus next
+	, ((0			   , 0x1008ff17), spawn "mpc next")
 	--take screenshot
 	, ((0              , 0xff61), spawn "import -window root ~/Dropbox/Public/`date '+%Y%m%d-%H%M%S'`.png")
 
@@ -216,9 +225,9 @@ myLayout = tiled ||| Mirror tiled ||| Full
 --
 myManageHook = composeAll
     [ className =? "MPlayer"        --> doFloat
+	, className =? "Wicd-client.py" --> doFloat
 	, className =? "VLC"            --> doFloat
     , className =? "Gimp"           --> doFloat
-	, className =? "Orage"          --> doFloat
     , resource  =? "desktop_window" --> doIgnore
     , resource  =? "kdesktop"       --> doIgnore ]
 
@@ -231,7 +240,7 @@ myManageHook = composeAll
 -- return (All True) if the default handler is to be run afterwards. To
 -- combine event hooks use mappend or mconcat from Data.Monoid.
 --
-myEventHook = mempty
+myEventHook = fullscreenEventHook
 
 ------------------------------------------------------------------------
 -- Status bars and logging
