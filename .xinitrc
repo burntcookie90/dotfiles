@@ -26,9 +26,6 @@ case $1 in
 		exec dbus-launch xmonad
 		#set the cursor
 		;;
-	awesome)
-		exec dbus-launch awesome
-		;;
 #	*)
 #		exec $DEFAULT_SESSION
 #		;;
