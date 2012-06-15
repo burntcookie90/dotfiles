@@ -12,6 +12,7 @@ import Data.Monoid
 import System.Exit
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.EwmhDesktops
+import XMonad.Layout.NoBorders
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 
@@ -132,6 +133,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 	--take screenshot
 	, ((0              , 0xff61), spawn "import -window root ~/Dropbox/Public/`date '+%Y%m%d-%H%M%S'`.png")
 
+	--lock screen
+	, ((modm .|. shiftMask, xK_l), spawn "xscreensaver-command --lock")
+
     -- Toggle the status bar gap
     -- Use this binding with avoidStruts from Hooks.ManageDocks.
     -- See also the statusBar function from Hooks.DynamicLog.
@@ -194,7 +198,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 -- The available layouts.  Note that each layout is separated by |||,
 -- which denotes layout choice.
 --
-myLayout = tiled ||| Mirror tiled ||| Full
+myLayout = tiled ||| Mirror tiled ||| noBorders Full
   where
      -- default tiling algorithm partitions the screen into two panes
      tiled   = Tall nmaster delta ratio
