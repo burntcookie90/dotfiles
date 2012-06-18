@@ -35,14 +35,17 @@ alias AUR='sudo pacman -U'
 alias rtfn='elinks https://www.archlinux.org/feeds/news/'
 alias gadd="git add"
 alias gcommit="git commit"
-alias gpush="git push -u origin master"
-alias gpull="git pull origin master"
+alias gpush="git push -u origin desktop"
+alias gpull="git pull origin desktop"
 complete -cf sudo
 complete -cf man
 complete -cf Install
 complete -cf Remove
 complete -cf Upgrade
 complete -cf Search
+complete -cf gadd
+complete -cf gcommit
+complete -cf gpull
 alias wifi="wicd-curses"
 alias grep='grep --color=auto'
 alias eclim_2200="eclimd -f ~/.eclimrc1"
@@ -51,4 +54,7 @@ alias performance="sh ~/cpugov_perf.sh"
 alias ondemand="sh ~/cpugov_ondemand.sh"
 alias transmission="transmission-cli -b -er -u 5"
 complete -cf transmission
-alias youtube-mp3="youtube-dl --extract-audio --audio-format mp3 --audio-quality 320k"
+alias music="ncmpcpp"
+if [ -e /bin/adb.txt ] ; then
+     source /bin/adb.txt
+fi
