@@ -33,8 +33,8 @@ alias AUR='sudo pacman -U'
 alias rtfn='elinks https://www.archlinux.org/feeds/news/'
 alias gadd="git add"
 alias gcommit="git commit"
-alias gpush="git push -u origin master"
-alias gpull="git pull origin master"
+alias gpush="git push -u origin server"
+alias gpull="git pull origin server"
 complete -cf sudo
 complete -cf man
 complete -cf Install
