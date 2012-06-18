@@ -1,5 +1,5 @@
 alsi -u
-sensors | grep temp1
+sensors | grep temp2
 PS1='\[\e[0;32m\]\u@\h\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] '
 HISTSIZE=100000
 HISTFILESIZE=100000
@@ -9,8 +9,6 @@ export PATH=$PATH:/opt/android-sdk/platform-tools/
 export EDITOR=vim
 export PATH=$PATH:/opt/android-sdk/tools/
 export USE_CCACHE=1
-export ECLIPSE_HOME=/usr/share/eclipse
-export PATH=$PATH:$ECLIPSE_HOME
 #export JAVA_HOME=/home/vishnu/Downloads/jdk1.6.0_31
 #export PATH=$PATH:$JAVA_HOME/bin
 alias spring12='cd ~/Dropbox/GT\ Documents/2011-2012/Spring\ 2012/'
