@@ -35,8 +35,8 @@ alias AUR='sudo pacman -U'
 alias rtfn='elinks https://www.archlinux.org/feeds/news/'
 alias gadd="git add"
 alias gcommit="git commit"
-alias gpush="git push -u origin desktop"
-alias gpull="git pull origin desktop"
+alias gpush="git push -u origin"
+alias gpull="git pull origin"
 complete -cf sudo
 complete -cf man
 complete -cf Install
@@ -58,3 +58,4 @@ alias music="ncmpcpp"
 if [ -e /bin/adb.txt ] ; then
      source /bin/adb.txt
 fi
+alias TV='cd ~/Videos/TV'
