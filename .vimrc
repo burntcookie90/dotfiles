@@ -1,3 +1,6 @@
+" pathogen
+call pathogen#infect()
+
 syntax on
 set smartindent
 set autoindent
@@ -14,3 +17,8 @@ filetype plugin on
 filetype indent on
 autocmd Filetype tex,latex :set grepprg=grep\ -nH\ $*
 autocmd Filetype tex,latex :set dictionary=~/.vim/dict/latex.dict
+
+"" solarized
+"set background=dark
+"let g:solarized_termtrans=1
+"colorscheme solarized

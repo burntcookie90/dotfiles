@@ -11,6 +11,9 @@ import XMonad
 import Data.Monoid
 import System.Exit
 import XMonad.Hooks.DynamicLog
+import XMonad.Hooks.ManageDocks
+import XMonad.Layout.NoBorders
+import XMonad.Layout.PerWorkspace
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 
@@ -34,6 +37,11 @@ myBorderWidth   = 1
 --
 myModMask       = mod1Mask
 
+-- Define layout for specific workspaces  
+nobordersLayout = noBorders $ Full 
+
+nobordersOrStrutsLayout = avoidStruts ( nobordersLayout )
+
 -- The default number of workspaces (virtual screens) and their names.
 -- By default we use numeric strings, but any string may be used as a
 -- workspace name. The number of workspaces is determined by the length
@@ -43,12 +51,16 @@ myModMask       = mod1Mask
 --
 -- > workspaces = ["web", "irc", "code" ] ++ map show [4..9]
 --
-myWorkspaces    = ["1","2","3","4","5","6","7","8","9"]
+-- Put all layouts together  
+myLayout = onWorkspace "9:video" nobordersOrStrutsLayout $ defaultLayout
+
+myWorkspaces    = ["1","2","3","4","5","6","7","8","9:video"]
 
 -- Border colors for unfocused and focused windows, respectively.
 --
 myNormalBorderColor  = "#dddddd"
 myFocusedBorderColor = "#ff0000"
+
 
 ------------------------------------------------------------------------
 -- Key bindings. Add, modify or remove key bindings here.
@@ -59,10 +71,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
 
     -- launch dmenu
-    , ((modm,               xK_p     ), spawn "dmenu_run")
+    , ((modm,               xK_p     ), spawn "yeganesh -x")
 
     -- launch gmrun
-    , ((modm .|. shiftMask, xK_p     ), spawn "gmrun")
+    {-, ((modm .|. shiftMask, xK_p     ), spawn "gmrun")-}
 
     -- close focused window
     , ((modm .|. shiftMask, xK_c     ), kill)
@@ -127,7 +139,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- Use this binding with avoidStruts from Hooks.ManageDocks.
     -- See also the statusBar function from Hooks.DynamicLog.
     --
-    -- , ((modm              , xK_b     ), sendMessage ToggleStruts)
+	, ((modm              , xK_b     ), sendMessage ToggleStruts)
 
     -- Quit xmonad
     , ((modm .|. shiftMask, xK_q     ), io (exitWith ExitSuccess))
@@ -185,7 +197,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 -- The available layouts.  Note that each layout is separated by |||,
 -- which denotes layout choice.
 --
-myLayout = tiled ||| Mirror tiled ||| Full
+defaultLayout = tiled ||| Mirror tiled ||| Full
   where
      -- default tiling algorithm partitions the screen into two panes
      tiled   = Tall nmaster delta ratio
@@ -216,11 +228,14 @@ myLayout = tiled ||| Mirror tiled ||| Full
 --
 myManageHook = composeAll
     [ className =? "MPlayer"        --> doFloat
-	, className =? "VLC"            --> doFloat
+--	, className =? "Vlc"            --> doFloat
     , className =? "Gimp"           --> doFloat
 	, className =? "Orage"          --> doFloat
     , resource  =? "desktop_window" --> doIgnore
-    , resource  =? "kdesktop"       --> doIgnore ]
+    , resource  =? "kdesktop"       --> doIgnore 
+	, className =? "Vlc" 			--> doShift "9:video"
+	, className =? "Skype" 			--> doFloat
+	]
 
 ------------------------------------------------------------------------
 -- Event handling
