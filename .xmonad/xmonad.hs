@@ -9,11 +9,17 @@
 
 import XMonad
 import Data.Monoid
+
 import System.Exit
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
+import XMonad.Hooks.EwmhDesktops
+
 import XMonad.Layout.NoBorders
 import XMonad.Layout.PerWorkspace
+import XMonad.Layout.Spiral
+import XMonad.Layout.Tabbed
+
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 
@@ -71,7 +77,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
 
     -- launch dmenu
-    , ((modm,               xK_p     ), spawn "yeganesh -x")
+    , ((modm,               xK_p     ), spawn "dmenu_run")
 
     -- launch gmrun
     {-, ((modm .|. shiftMask, xK_p     ), spawn "gmrun")-}
@@ -187,7 +193,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
     ]
 
 ------------------------------------------------------------------------
--- Layouts:
+-- %Layouts:
 
 -- You can specify and transform your layouts by modifying these values.
 -- If you change layout bindings be sure to use 'mod-shift-space' after
@@ -197,7 +203,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 -- The available layouts.  Note that each layout is separated by |||,
 -- which denotes layout choice.
 --
-defaultLayout = tiled ||| Mirror tiled ||| Full
+defaultLayout = tiled ||| Mirror tiled ||| simpleTabbed ||| spiral (6/7) ||| Full 
   where
      -- default tiling algorithm partitions the screen into two panes
      tiled   = Tall nmaster delta ratio
@@ -246,7 +252,7 @@ myManageHook = composeAll
 -- return (All True) if the default handler is to be run afterwards. To
 -- combine event hooks use mappend or mconcat from Data.Monoid.
 --
-myEventHook = mempty
+myEventHook = fullscreenEventHook
 
 ------------------------------------------------------------------------
 -- Status bars and logging
