@@ -65,7 +65,7 @@ myWorkspaces    = ["1","2","3","4","5","6","7","8","9:video"]
 -- Border colors for unfocused and focused windows, respectively.
 --
 myNormalBorderColor  = "#dddddd"
-myFocusedBorderColor = "#ff0000"
+myFocusedBorderColor = "#33B5E5"
 
 
 ------------------------------------------------------------------------
@@ -92,7 +92,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm .|. shiftMask, xK_space ), setLayout $ XMonad.layoutHook conf)
 
     -- Resize viewed windows to the correct size
-    , ((modm,               xK_n     ), refresh)
+    , ((modm,               xK_r     ), refresh)
 
     -- Move focus to the next window
     , ((modm,               xK_Tab   ), windows W.focusDown)
@@ -140,6 +140,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
 	--take screenshot
 	, ((0              , 0xff61), spawn "import -window root ~/Dropbox/Public/`date '+%Y%m%d-%H%M%S'`.png")
+
+	--lock computer
+	, ((0 			   , 0x1008ff2d), spawn "xscreensaver-command -lock")
 
     -- Toggle the status bar gap
     -- Use this binding with avoidStruts from Hooks.ManageDocks.
@@ -203,7 +206,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 -- The available layouts.  Note that each layout is separated by |||,
 -- which denotes layout choice.
 --
-defaultLayout = tiled ||| Mirror tiled ||| simpleTabbed ||| spiral (6/7) ||| Full 
+defaultLayout = tiled ||| Mirror tiled ||| Full ||| simpleTabbed ||| spiral (6/7)
   where
      -- default tiling algorithm partitions the screen into two panes
      tiled   = Tall nmaster delta ratio
@@ -241,6 +244,7 @@ myManageHook = composeAll
     , resource  =? "kdesktop"       --> doIgnore 
 	, className =? "Vlc" 			--> doShift "9:video"
 	, className =? "Skype" 			--> doFloat
+	, className =? "Transmission-gtk" --> doShift "8"
 	]
 
 ------------------------------------------------------------------------
