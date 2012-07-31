@@ -58,9 +58,9 @@ nobordersOrStrutsLayout = avoidStruts ( nobordersLayout )
 -- > workspaces = ["web", "irc", "code" ] ++ map show [4..9]
 --
 -- Put all layouts together  
-myLayout = onWorkspace "9:video" nobordersOrStrutsLayout $ defaultLayout
+myLayout = onWorkspace "9:media" nobordersOrStrutsLayout $ defaultLayout
 
-myWorkspaces    = ["1","2","3","4","5","6","7","8","9:video"]
+myWorkspaces    = ["1","2","3","4","5","6","7","8","9:media"]
 
 -- Border colors for unfocused and focused windows, respectively.
 --
@@ -143,6 +143,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
 	--lock computer
 	, ((0 			   , 0x1008ff2d), spawn "xscreensaver-command -lock")
+
+	--toggle touchpad
+	, ((modm 		   , 0xffc6), spawn "synclient TouchpadOff=$(synclient -l | grep -c 'TouchpadOff.*=.*0')")
 
     -- Toggle the status bar gap
     -- Use this binding with avoidStruts from Hooks.ManageDocks.
@@ -242,9 +245,11 @@ myManageHook = composeAll
 	, className =? "Orage"          --> doFloat
     , resource  =? "desktop_window" --> doIgnore
     , resource  =? "kdesktop"       --> doIgnore 
-	, className =? "Vlc" 			--> doShift "9:video"
+	, className =? "Vlc" 			--> doShift "9:media"
 	, className =? "Skype" 			--> doFloat
 	, className =? "Transmission-gtk" --> doShift "8"
+	, className =? "Eclipse" 		--> doShift "4"
+	, className =? "GMusic_Front" 	--> doFloat
 	]
 
 ------------------------------------------------------------------------

@@ -5,11 +5,12 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="afowler"
 
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
+alias zshconfig="vim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias droprestart="dropbox stop; dropbox start"
 alias chromium_socks="chromium --proxy-server="socks://127.0.0.1:1080" --user-data-dir=~/SOCKS"
 alias SOCKS="ssh -C -D 1080 index.vishnurajeevan.com"
 alias spring12='cd ~/Dropbox/GT\ Documents/2011-2012/Spring\ 2012/'
@@ -46,6 +47,17 @@ alias powersave="sh ~/cpugov_powersave.sh"
 alias transmission="transmission-cli -b -er -u 5"
 alias youtube-mp3="youtube-dl -t --extract-audio --audio-format mp3 --audio-quality 320k"
 alias pathogen="cd ~/.vim/bundle;git clone "
+alias mirror_web="wget -rmk"
+#
+autoload -U promptinit
+promptinit
+
+#prompt suse
+
+autoload -U colors && colors
+
+PROMPT="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg[yellow]%}%1~ %{$reset_color%}# "
+RPROMPT="[%{$fg[yellow]%}%~%{$reset_color%}]"
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -67,36 +79,41 @@ alias pathogen="cd ~/.vim/bundle;git clone "
 plugins=(git archlinux github)
 
 source $ZSH/oh-my-zsh.sh
-
 # Customize to your needs...
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/android-sdk/platform-tools:/opt/android-sdk/tools:/opt/java/bin:/opt/java/db/bin:/opt/java/jre/bin:/usr/bin/vendor_perl:/usr/bin/core_perl:/opt/android-sdk/platform-tools/:/home/vishnu/bin/:/opt/android-sdk/tools/:/usr/share/eclipse:/opt/android-sdk/platform-tools/:/home/vishnu/bin/:/opt/android-sdk/tools/:/usr/share/eclipse
+
 autoload -U compinit
 compinit
 setopt completealiases
 
-autoload -U promptinit
-promptinit
-
-prompt suse
-
-autoload -U colors && colors
-
-PROMPT="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg[yellow]%}%1~ %{$reset_color%}# "
-RPROMPT="[%{$fg[yellow]%}%~%{$reset_color%}]"
 
 #exports
-export HISTCONTROL=ignoreboth
-export HISTIGNORE='history*'
-export PATH=$PATH:/opt/android-sdk/platform-tools/
-export PATH=$PATH:/home/vishnu/bin/
+#export PATH=$PATH:/opt/android-sdk/platform-tools/
+#export PATH=$PATH:/home/vishnu/bin/
 export EDITOR=vim
-export PATH=$PATH:/opt/android-sdk/tools/
+#export PATH=$PATH:/opt/android-sdk/tools/
 export USE_CCACHE=1
 export ECLIPSE_HOME=/usr/share/eclipse
-export PATH=$PATH:$ECLIPSE_HOME
-bindkey "^R" history-beginning-search-backward
+#export PATH=$PATH:$ECLIPSE_HOME
+bindkey -e
+bindkey '^R' history-incremental-search-backward
 bindkey "^[[B" history-beginning-search-forward
+bindkey "^[[A" history-beginning-search-backward
 
 alsi -u
 sensors | grep temp1
+
+
+## Command history configuration
+HISTFILE=$HOME/.zsh_history
 HISTSIZE=100000
-HISTFILESIZE=100000
+SAVEHIST=100000
+
+setopt append_history
+setopt extended_history
+setopt hist_expire_dups_first
+setopt hist_ignore_dups # ignore duplication command history list
+setopt hist_ignore_space
+setopt hist_verify
+setopt inc_append_history
+setopt share_history # share command history data
