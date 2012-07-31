@@ -1,0 +1,16 @@
+[global_config]
+  enabled_plugins = InactivityWatch, TerminalShot
+  borderless = True
+[keybindings]
+[profiles]
+  [[default]]
+    scrollback_infinite = True
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]

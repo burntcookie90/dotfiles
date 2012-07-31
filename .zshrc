@@ -8,6 +8,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="afowler"
 
 # Example aliases
+alias vimconfig="vim ~/.vimrc"
 alias zshconfig="vim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias droprestart="dropbox stop; dropbox start"
