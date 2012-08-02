@@ -5,6 +5,11 @@
 [profiles]
   [[default]]
     scrollback_infinite = True
+  [[mydefaults]]
+    copy_on_selection = True
+    /*background_color = "#313131"*/
+    scrollback_infinite = True
+    /*foreground_color = "#bbbbbb"*/
 [layouts]
   [[default]]
     [[[child1]]]
