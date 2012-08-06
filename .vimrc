@@ -27,6 +27,7 @@ set t_Co=256
 
 "backup
 set backup              " keep a backup file
+set backupdir=~/.vim/backup,/tmp
 
 " plug-in settings
 filetype plugin on

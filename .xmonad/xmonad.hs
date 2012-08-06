@@ -251,6 +251,7 @@ myManageHook = composeAll
 	, className =? "Transmission-gtk" --> doShift "8"
 	, className =? "Eclipse" 		--> doShift "4"
 	, className =? "GMusic_Front" 	--> doFloat
+	, title 	=? "NixNote" 		--> doShift "7"
 	]
 
 ------------------------------------------------------------------------
