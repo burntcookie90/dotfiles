@@ -8,6 +8,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="afowler"
 
 # Example aliases
+alias vlcn="vlc -I ncurses"
 alias vimconfig="vim ~/.vimrc"
 alias zshconfig="vim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -61,7 +62,7 @@ autoload -U colors && colors
 PROMPT="%{$fg[red]%}%n%{$reset_color%}@%{$fg[blue]%}%m %{$fg[yellow]%}%1~ %{$reset_color%}# "
 RPROMPT="[%{$fg[yellow]%}%~%{$reset_color%}]"
 # Set to this to use case-sensitive completion
-# CASE_SENSITIVE="true"
+CASE_SENSITIVE="true"
 
 # Comment this out to disable weekly auto-update checks
 # DISABLE_AUTO_UPDATE="true"

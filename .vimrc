@@ -70,11 +70,11 @@ let g:NERDTreeShowHidden = 1
 
 
 ""statusline
-"set statusline=%{fugitive#statusline()}
+set statusline=%{fugitive#statusline()}
 set nocompatible   " Disable vi-compatibility
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs   "
-let g:Powerline_symbols = 'unicode'
+"let g:Powerline_symbols = 'unicode'
 
 "restore cursor position in files
 if has("autocmd")
