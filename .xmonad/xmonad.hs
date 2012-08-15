@@ -9,17 +9,25 @@
 
 import XMonad
 import Data.Monoid
+
 import System.Exit
 import XMonad.Hooks.DynamicLog
+import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.EwmhDesktops
+
 import XMonad.Layout.NoBorders
+import XMonad.Layout.PerWorkspace
+import XMonad.Layout.Spiral
+import XMonad.Layout.Tabbed
+
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 
 -- The preferred terminal program, which is used in a binding below and by
 -- certain contrib modules.
 --
-myTerminal      = "terminal"
+{-myTerminal      = "terminator -p mydefaults"-}
+myTerminal = "terminal"
 
 -- Whether focus follows the mouse pointer.
 myFocusFollowsMouse :: Bool
@@ -36,6 +44,11 @@ myBorderWidth   = 1
 --
 myModMask       = mod1Mask
 
+-- Define layout for specific workspaces  
+nobordersLayout = noBorders $ Full 
+
+nobordersOrStrutsLayout = avoidStruts ( nobordersLayout )
+
 -- The default number of workspaces (virtual screens) and their names.
 -- By default we use numeric strings, but any string may be used as a
 -- workspace name. The number of workspaces is determined by the length
@@ -45,12 +58,16 @@ myModMask       = mod1Mask
 --
 -- > workspaces = ["web", "irc", "code" ] ++ map show [4..9]
 --
-myWorkspaces    = ["1","2","3","4","5","6","7","8","9"]
+-- Put all layouts together  
+myLayout = onWorkspace "9:media" nobordersOrStrutsLayout $ defaultLayout
+
+myWorkspaces    = ["1","2","3","4","5","6","7","8","9:media"]
 
 -- Border colors for unfocused and focused windows, respectively.
 --
 myNormalBorderColor  = "#dddddd"
-myFocusedBorderColor = "#ff0000"
+myFocusedBorderColor = "#33B5E5"
+
 
 ------------------------------------------------------------------------
 -- Key bindings. Add, modify or remove key bindings here.
@@ -64,7 +81,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               xK_p     ), spawn "dmenu_run")
 
     -- launch gmrun
-    , ((modm .|. shiftMask, xK_p     ), spawn "gmrun")
+    {-, ((modm .|. shiftMask, xK_p     ), spawn "gmrun")-}
 
     -- close focused window
     , ((modm .|. shiftMask, xK_c     ), kill)
@@ -76,7 +93,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm .|. shiftMask, xK_space ), setLayout $ XMonad.layoutHook conf)
 
     -- Resize viewed windows to the correct size
-    , ((modm,               xK_n     ), refresh)
+    , ((modm,               xK_r     ), refresh)
 
     -- Move focus to the next window
     , ((modm,               xK_Tab   ), windows W.focusDown)
@@ -122,25 +139,27 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 	--raise volume
 	, ((0              , 0x1008ff13), spawn "amixer set Master 2%+")
 
-	--music play/pause
-	, ((0			   , 0x1008ff14), spawn "mpc toggle")
-
-	--cmus prev
-	, ((0			   , 0x1008ff16), spawn "mpc prev")
-
-	--cmus next
-	, ((0			   , 0x1008ff17), spawn "mpc next")
 	--take screenshot
 	, ((0              , 0xff61), spawn "import -window root ~/Dropbox/Public/`date '+%Y%m%d-%H%M%S'`.png")
 
-	--lock screen
-	, ((modm .|. shiftMask, xK_l), spawn "xscreensaver-command --lock")
+	--lock computer
+	, ((0 			   , 0x1008ff2d), spawn "xscreensaver-command -lock")
 
+	--music play/pause
+    , ((0              , 0x1008ff14), spawn "mpc toggle")
+
+    --mpc prev
+    , ((0              , 0x1008ff16), spawn "mpc prev")
+
+    --mpc next
+    , ((0              , 0x1008ff17), spawn "mpc next")
+    --take screenshot
+    , ((0              , 0xff61), spawn "import -window root ~/Dropbox/Public/`date '+%Y%m%d-%H%M%S'`.png")
     -- Toggle the status bar gap
     -- Use this binding with avoidStruts from Hooks.ManageDocks.
     -- See also the statusBar function from Hooks.DynamicLog.
     --
-    -- , ((modm              , xK_b     ), sendMessage ToggleStruts)
+	, ((modm              , xK_b     ), sendMessage ToggleStruts)
 
     -- Quit xmonad
     , ((modm .|. shiftMask, xK_q     ), io (exitWith ExitSuccess))
@@ -188,7 +207,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
     ]
 
 ------------------------------------------------------------------------
--- Layouts:
+-- %Layouts:
 
 -- You can specify and transform your layouts by modifying these values.
 -- If you change layout bindings be sure to use 'mod-shift-space' after
@@ -198,7 +217,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 -- The available layouts.  Note that each layout is separated by |||,
 -- which denotes layout choice.
 --
-myLayout = tiled ||| Mirror tiled ||| Full ||| noBorders Full
+defaultLayout = tiled ||| Mirror tiled ||| Full ||| simpleTabbed ||| spiral (6/7)
   where
      -- default tiling algorithm partitions the screen into two panes
      tiled   = Tall nmaster delta ratio
@@ -229,11 +248,18 @@ myLayout = tiled ||| Mirror tiled ||| Full ||| noBorders Full
 --
 myManageHook = composeAll
     [ className =? "MPlayer"        --> doFloat
-	, className =? "Wicd-client.py" --> doFloat
-	, className =? "VLC"            --> doFloat
+--	, className =? "Vlc"            --> doFloat
     , className =? "Gimp"           --> doFloat
+	, className =? "Orage"          --> doFloat
     , resource  =? "desktop_window" --> doIgnore
-    , resource  =? "kdesktop"       --> doIgnore ]
+    , resource  =? "kdesktop"       --> doIgnore 
+	, className =? "Vlc" 			--> doShift "9:media"
+	, className =? "Skype" 			--> doFloat
+	, className =? "Transmission-gtk" --> doShift "8"
+	, className =? "Eclipse" 		--> doShift "4"
+	{-, className =? "GMusic_Front" 	--> doFloat-}
+	, title 	=? "NixNote" 		--> doShift "7"
+	]
 
 ------------------------------------------------------------------------
 -- Event handling
