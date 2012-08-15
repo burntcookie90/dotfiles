@@ -1,13 +1,13 @@
 [Configuration]
-FontName=Inconsolata Medium 12
+FontName=Inconsolata Medium 11
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
-MiscBordersDefault=TRUE
+MiscBordersDefault=FALSE
 MiscCursorBlinks=TRUE
 MiscCursorShape=TERMINAL_CURSOR_SHAPE_BLOCK
 MiscDefaultGeometry=100x24
 MiscInheritGeometry=FALSE
-MiscMenubarDefault=TRUE
+MiscMenubarDefault=FALSE
 MiscMouseAutohide=FALSE
 MiscToolbarsDefault=FALSE
 MiscConfirmClose=TRUE
@@ -16,8 +16,13 @@ MiscTabCloseButtons=TRUE
 MiscTabCloseMiddleClick=TRUE
 MiscTabPosition=GTK_POS_TOP
 MiscHighlightUrls=TRUE
-BackgroundDarkness=0.860000
-ColorForeground=#0ea8ffff0000
+BackgroundDarkness=0.890000
 TitleMode=TERMINAL_TITLE_REPLACE
-ColorCursor=#104640000000
+ColorCursor=#00009999cccc
+ColorForeground=#3333b5b5e5e5
+BackgroundMode=TERMINAL_BACKGROUND_TRANSPARENT
+ScrollingBar=TERMINAL_SCROLLBAR_NONE
+ScrollingLines=100000
+AccelSwitchToTab8=Escape
+AccelContents=
 
