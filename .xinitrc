@@ -19,8 +19,11 @@ case $1 in
 		;;
 	xmonad)
 		/usr/bin/xscreensaver -no-splash &
-		trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 6 --transparent true --alpha 0 --tint 0x000000 --height 16 &  
+		synergys -c ~/synergy.conf &
+		google-musicmanager &
+		trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 2 --transparent true --alpha 0 --tint 0x000000 --height 16 &  
 		wicd-client --tray &
+		mpd &
 		dropbox start &
 		sh ~/.fehbg &
 		exec dbus-launch xmonad
