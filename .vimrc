@@ -19,8 +19,8 @@ set showmatch
 
 ""set number in current split
 set number
-":au WinEnter * :setlocal number
-":au WinLeave * :setlocal nonumber
+:au WinEnter * :setlocal number
+:au WinLeave * :setlocal nonumber
 
 "" set colorschemes to 256 colors
 set t_Co=256
