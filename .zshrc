@@ -9,6 +9,7 @@ ZSH_THEME="afowler"
 
 # Example aliases
 alias vlcn="vlc -I ncurses"
+alias vlc="vlc --extraintf=http"
 alias vimconfig="vim ~/.vimrc"
 alias zshconfig="vim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"

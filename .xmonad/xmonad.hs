@@ -143,7 +143,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 	, ((0              , 0xff61), spawn "import -window root ~/Dropbox/Public/`date '+%Y%m%d-%H%M%S'`.png")
 
 	--lock computer
-	, ((0 			   , 0x1008ff2d), spawn "xscreensaver-command -lock")
+	, ((modm .|. shiftMask, xK_l), spawn "xscreensaver-command -lock")
 
 	--music play/pause
     , ((0              , 0x1008ff14), spawn "mpc toggle")
