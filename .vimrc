@@ -85,3 +85,7 @@ endif
 au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline cursorcolumn
 set cursorline cursorcolumn
+
+"LaTeX rules
+"let g:Tex_CompileRule_pdf
+let g:tex_flavor='latex'
