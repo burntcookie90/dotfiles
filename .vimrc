@@ -33,6 +33,11 @@ set backupdir=~/.vim/backup,/tmp
 set undodir=~/.vim/undodir
 set undofile
 
+
+""undo
+set undodir=~/.vim/undodir
+set undofile
+
 "" plug-in settings
 filetype plugin on
 filetype indent on

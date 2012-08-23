@@ -9,6 +9,7 @@ ZSH_THEME="afowler"
 
 # Example aliases
 alias vlcn="vlc -I ncurses"
+alias vlc="vlc --extraintf=http"
 alias vimconfig="vim ~/.vimrc"
 alias zshconfig="vim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -57,7 +58,9 @@ alias transmission="transmission-cli -b -er -u 5"
 alias youtube-mp3="youtube-dl -t --extract-audio --audio-format mp3 --audio-quality 320k"
 alias pathogen="cd ~/.vim/bundle;git clone "
 alias mirror_web="wget -rmk"
-#
+alias music="ncmpcpp"
+alias TV='cd ~/Videos/TV'
+alias steam='WINEDEBUG=-all wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Steam/Steam.exe >/dev/null 2>&1 &'
 autoload -U promptinit
 promptinit
 
