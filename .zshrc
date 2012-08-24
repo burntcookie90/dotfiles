@@ -8,6 +8,8 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="afowler"
 
 # Example aliases
+alias pathogen_add="git submodule add "
+alias pathogen_upgrade="git submodule foreach git pull origin master"
 alias vlcn="vlc -I ncurses"
 alias vlc="vlc --extraintf=http"
 alias vimconfig="vim ~/.vimrc"
@@ -50,7 +52,6 @@ alias ondemand="sh ~/cpugov_ondemand.sh"
 alias powersave="sh ~/cpugov_powersave.sh"
 alias transmission="transmission-cli -b -er -u 5"
 alias youtube-mp3="youtube-dl -t --extract-audio --audio-format mp3 --audio-quality 320k"
-alias pathogen="cd ~/.vim/bundle;git clone "
 alias mirror_web="wget -rmk"
 alias music="ncmpcpp"
 alias TV='cd ~/Videos/TV'
