@@ -8,6 +8,8 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="afowler"
 
 # Example aliases
+alias vaio='ssh -p 24 index.vishnurajeevan.com'                                                                                                                                               
+alias rpi='ssh -p 23 index.vishnurajeevan.com'
 alias pathogen_add="git submodule add "
 alias pathogen_upgrade="git submodule foreach git pull origin master"
 alias vlcn="vlc -I ncurses"
