@@ -1,9 +1,9 @@
-sw_volume: 33
+sw_volume: 54
 audio_device_state:1:My HTTP Stream
 audio_device_state:1:My Pulse Output
 state: play
-current: 187
-time: 130
+current: 134
+time: 157
 random: 0
 repeat: 0
 single: 0
@@ -12,193 +12,142 @@ crossfade: 2
 mixrampdb: 0.000000
 mixrampdelay: nan
 playlist_begin
-0:Circa Survive/On Letting Go/01-circa_survive-living_together.mp3
-1:Circa Survive/On Letting Go/02-circa_survive-in_the_morning_and_amazing.mp3
-2:Circa Survive/On Letting Go/03-circa_survive-the_greatest_lie.mp3
-3:Circa Survive/On Letting Go/04-circa_survive-the_difference_between_medicine_and_poison_is_in_the_dose.mp3
-4:Circa Survive/On Letting Go/05-circa_survive-mandala.mp3
-5:Circa Survive/On Letting Go/06-circa_survive-travel_hymn.mp3
-6:Circa Survive/On Letting Go/07-circa_survive-semi_constructive_criticism.mp3
-7:Circa Survive/On Letting Go/08-circa_survive-kicking_your_crosses_down.mp3
-8:Circa Survive/On Letting Go/09-circa_survive-on_letting_go.mp3
-9:Circa Survive/On Letting Go/10-circa_survive-carry_us_away.mp3
-10:Circa Survive/On Letting Go/11-circa_survive-close_your_eyes_to_see.mp3
-11:Circa Survive/On Letting Go/12-circa_survive-your_friends_are_gone.mp3
-12:The Black Keys/[2002] the big come up/[01] busted.mp3
-13:The Black Keys/[2002] the big come up/[02] do the rump.mp3
-14:The Black Keys/[2002] the big come up/[03] I'll be your man.mp3
-15:The Black Keys/[2002] the big come up/[04] countdown.mp3
-16:The Black Keys/[2002] the big come up/[05] the breaks.mp3
-17:The Black Keys/[2002] the big come up/[06] run me down.mp3
-18:The Black Keys/[2002] the big come up/[07] leavin' truck.mp3
-19:The Black Keys/[2002] the big come up/[08] heavy soul.mp3
-20:The Black Keys/[2002] the big come up/[09] she said, she said.mp3
-21:The Black Keys/[2002] the big come up/[10] them eyes.mp3
-22:The Black Keys/[2002] the big come up/[11] yearnin'.mp3
-23:The Black Keys/[2002] the big come up/[12] brooklyn bound.mp3
-24:The Black Keys/[2002] the big come up/[13] 240 years before your time.mp3
-25:The Black Keys/[2002] the big come up/[14] 240 years before your time (hidden track).mp3
-26:The Black Keys/[2002] the big come up/[01] busted.mp3
-27:The Black Keys/[2002] the big come up/[02] do the rump.mp3
-28:The Black Keys/[2002] the big come up/[03] I'll be your man.mp3
-29:The Black Keys/[2002] the big come up/[04] countdown.mp3
-30:The Black Keys/[2002] the big come up/[05] the breaks.mp3
-31:The Black Keys/[2002] the big come up/[06] run me down.mp3
-32:The Black Keys/[2002] the big come up/[07] leavin' truck.mp3
-33:The Black Keys/[2002] the big come up/[08] heavy soul.mp3
-34:The Black Keys/[2002] the big come up/[09] she said, she said.mp3
-35:The Black Keys/[2002] the big come up/[10] them eyes.mp3
-36:The Black Keys/[2002] the big come up/[11] yearnin'.mp3
-37:The Black Keys/[2002] the big come up/[12] brooklyn bound.mp3
-38:The Black Keys/[2002] the big come up/[13] 240 years before your time.mp3
-39:The Black Keys/[2002] the big come up/[14] 240 years before your time (hidden track).mp3
-40:The Black Keys/[2002] the big come up/[01] busted.mp3
-41:The Black Keys/[2002] the big come up/[02] do the rump.mp3
-42:The Black Keys/[2002] the big come up/[03] I'll be your man.mp3
-43:The Black Keys/[2002] the big come up/[04] countdown.mp3
-44:The Black Keys/[2002] the big come up/[05] the breaks.mp3
-45:The Black Keys/[2002] the big come up/[06] run me down.mp3
-46:The Black Keys/[2002] the big come up/[07] leavin' truck.mp3
-47:The Black Keys/[2002] the big come up/[08] heavy soul.mp3
-48:The Black Keys/[2002] the big come up/[09] she said, she said.mp3
-49:The Black Keys/[2002] the big come up/[10] them eyes.mp3
-50:The Black Keys/[2002] the big come up/[11] yearnin'.mp3
-51:The Black Keys/[2002] the big come up/[12] brooklyn bound.mp3
-52:The Black Keys/[2002] the big come up/[13] 240 years before your time.mp3
-53:The Black Keys/[2002] the big come up/[14] 240 years before your time (hidden track).mp3
-54:The Black Keys/[2004] The Moan [EP]/[01] the moan.mp3
-55:The Black Keys/[2004] The Moan [EP]/[02] heavy soul (alt).mp3
-56:The Black Keys/[2004] The Moan [EP]/[03] no fun.mp3
-57:The Black Keys/[2004] The Moan [EP]/[04] have love will travel.mp3
-58:The Black Keys/[2006] chulahoma ~ the songs of junior kimbrough [EP]/[07] junior's wife (hidden track).mp3
-59:The Black Keys/[2006] chulahoma ~ the songs of junior kimbrough [EP]/[01] keep your hands off her.mp3
-60:The Black Keys/[2006] chulahoma ~ the songs of junior kimbrough [EP]/[02] have mercy on me.mp3
-61:The Black Keys/[2006] chulahoma ~ the songs of junior kimbrough [EP]/[03] work me.mp3
-62:The Black Keys/[2006] chulahoma ~ the songs of junior kimbrough [EP]/[04] meet me in the city.mp3
-63:The Black Keys/[2006] chulahoma ~ the songs of junior kimbrough [EP]/[05] nobody but you.mp3
-64:The Black Keys/[2006] chulahoma ~ the songs of junior kimbrough [EP]/[06] my mind is ramblin'.mp3
-65:The Black Keys/[2002] the big come up/[01] busted.mp3
-66:The Black Keys/[2002] the big come up/[02] do the rump.mp3
-67:The Black Keys/[2002] the big come up/[03] I'll be your man.mp3
-68:The Black Keys/[2002] the big come up/[04] countdown.mp3
-69:The Black Keys/[2002] the big come up/[05] the breaks.mp3
-70:The Black Keys/[2002] the big come up/[06] run me down.mp3
-71:The Black Keys/[2002] the big come up/[07] leavin' truck.mp3
-72:The Black Keys/[2002] the big come up/[08] heavy soul.mp3
-73:The Black Keys/[2002] the big come up/[09] she said, she said.mp3
-74:The Black Keys/[2002] the big come up/[10] them eyes.mp3
-75:The Black Keys/[2002] the big come up/[11] yearnin'.mp3
-76:The Black Keys/[2002] the big come up/[12] brooklyn bound.mp3
-77:The Black Keys/[2002] the big come up/[13] 240 years before your time.mp3
-78:The Black Keys/[2002] the big come up/[14] 240 years before your time (hidden track).mp3
-79:The Black Keys/[2006] magic potion/[01] just got to be.mp3
-80:The Black Keys/[2006] magic potion/[02] your touch.mp3
-81:The Black Keys/[2006] magic potion/[03] youre the one.mp3
-82:The Black Keys/[2006] magic potion/[04] just a little heat.mp3
-83:The Black Keys/[2006] magic potion/[05] give your heart away.mp3
-84:The Black Keys/[2006] magic potion/[06] strange desire.mp3
-85:The Black Keys/[2006] magic potion/[07] modern times.mp3
-86:The Black Keys/[2006] magic potion/[08] the flame.mp3
-87:The Black Keys/[2006] magic potion/[09] goodbye babylon.mp3
-88:The Black Keys/[2006] magic potion/[10] black door.mp3
-89:The Black Keys/[2006] magic potion/[11] elevator.mp3
-90:The Black Keys/[2008] attack & release/[01] all you ever wanted.mp3
-91:The Black Keys/[2008] attack & release/[02] I got mine.mp3
-92:The Black Keys/[2008] attack & release/[03] strange times.mp3
-93:The Black Keys/[2008] attack & release/[04] psychotic girl.mp3
-94:The Black Keys/[2008] attack & release/[05] lies.mp3
-95:The Black Keys/[2008] attack & release/[06] remember when (side a).mp3
-96:The Black Keys/[2008] attack & release/[07] remember when (side b).mp3
-97:The Black Keys/[2008] attack & release/[08] same old thing.mp3
-98:The Black Keys/[2008] attack & release/[09] so he won't break.mp3
-99:The Black Keys/[2008] attack & release/[10] oceans & streams.mp3
-100:The Black Keys/[2008] attack & release/[11] things ain't like they used to be.mp3
-101:The Black Keys/[2008] attack & release/[01] all you ever wanted.mp3
-102:The Black Keys/[2008] attack & release/[02] I got mine.mp3
-103:The Black Keys/[2008] attack & release/[03] strange times.mp3
-104:The Black Keys/[2008] attack & release/[04] psychotic girl.mp3
-105:The Black Keys/[2008] attack & release/[05] lies.mp3
-106:The Black Keys/[2008] attack & release/[06] remember when (side a).mp3
-107:The Black Keys/[2008] attack & release/[07] remember when (side b).mp3
-108:The Black Keys/[2008] attack & release/[08] same old thing.mp3
-109:The Black Keys/[2008] attack & release/[09] so he won't break.mp3
-110:The Black Keys/[2008] attack & release/[10] oceans & streams.mp3
-111:The Black Keys/[2008] attack & release/[11] things ain't like they used to be.mp3
-112:The Black Keys/[2010] brothers/[01] everlasting light.mp3
-113:The Black Keys/[2010] brothers/[02] next girl.mp3
-114:The Black Keys/[2010] brothers/[03] tighten up.mp3
-115:The Black Keys/[2010] brothers/[04] howlin' for you.mp3
-116:The Black Keys/[2010] brothers/[05] she's long gone.mp3
-117:The Black Keys/[2010] brothers/[06] black mud.mp3
-118:The Black Keys/[2010] brothers/[07] the only one.mp3
-119:The Black Keys/[2010] brothers/[08] too afraid to love you.mp3
-120:The Black Keys/[2010] brothers/[09] ten cent pistol.mp3
-121:The Black Keys/[2010] brothers/[10] sinister kid.mp3
-122:The Black Keys/[2010] brothers/[11] the go getter.mp3
-123:The Black Keys/[2010] brothers/[12] I'm not the one.mp3
-124:The Black Keys/[2010] brothers/[13] unknown brother.mp3
-125:The Black Keys/[2010] brothers/[14] never give you up.mp3
-126:The Black Keys/[2010] brothers/[15] these days.mp3
-127:XV/XV- Zero Heroes (DatPiff.com)/01 - XV-Wichita Prod By Just Blaze.mp3
-128:XV/XV- Zero Heroes (DatPiff.com)/10 - XV-UFC Feat Kristina Rose Prod By Seven.mp3
-129:Mac Miller/Mac Miller - Blue Slide Park (2011)/06 - Smile Back.mp3
-130:Clipse/Clipse - Fast Life [Group Rip][Explicit][2009]/04. Trill Ft. Pharrell.mp3
-131:J. Cole/J. Cole - Cole World The Sideline Story (2011)/07 - Mr. Nice Watch (feat. Jay-Z).mp3
-132:Fort Minor/The_Rising_Tied/07-fort_minor-in_stereo.mp3
-133:Fort Minor/The_Rising_Tied/07-fort_minor-in_stereo.mp3
-134:Lupe Fiasco/Fort Minor ft. Lupe Fiasco & Holly Brook - Be Sombody.mp3
-135:J. Cole/J. Cole - Cole World The Sideline Story (2011)/07 - Mr. Nice Watch (feat. Jay-Z).mp3
-136:J. Cole/J. Cole - Cole World The Sideline Story (2011)/16 - Work Out.mp3
-137:J. Cole/J. Cole - Cole World The Sideline Story (2011)/03 - Can't Get Enough (feat. Trey Songz).mp3
-138:The Game/The Game - Doctors Advocate [2006]/03 - It's Okay (One Blood) (Produced By Reefa).mp3
-139:B.O.B/Strange Clouds/05 - Strange Clouds Feat. Lil Wayne.mp3
-140:B.O.B/Strange Clouds/06 - So Good.mp3
-141:B.O.B/Strange Clouds/05 - Strange Clouds Feat. Lil Wayne.mp3
-142:B.O.B/www.NewAlbumReleases.net_B.O.B. - The Adventures Of Bobby Ray (2010)/www.NewAlbumReleases.net_07 - The Kids (ft. Janelle Monae).mp3
-143:B.O.B/www.NewAlbumReleases.net_B.O.B. - The Adventures Of Bobby Ray (2010)/www.NewAlbumReleases.net_09 - Fame.mp3
-144:B.O.B/www.NewAlbumReleases.net_B.O.B. - The Adventures Of Bobby Ray (2010)/www.NewAlbumReleases.net_08 - Magic (ft. Rivers Cuomo).mp3
-145:outkast/Speakerboxxx/105-big_boi-the_way_you_move_(feat_sleepy_brown)-rns.mp3
-146:eminem/Various Artists - 8 Mile (OST)/Various Artists - 8 Mile (OST) - 01 - Lose Yourself (Eminem).mp3
-147:Jay-Z/The Blueprint 3/07 On To the Next One (feat. Swizz B.mp3
-148:Jay-Z/Jay-Z - The Black Album/06 - Jay-z - Dirt off your shoulder (produced_by_timbaland)-21st.mp3
-149:Kanye West/Jay Z and Kanye West - Watch The Throne (2011)/14 - H•A•M.mp3
-150:Circa Survive/Circa Survive - Violent Waves (2012)/01 - Birth Of The Economic Hit Man.mp3
-151:Circa Survive/Circa Survive - Violent Waves (2012)/02 - Sharp Practice.mp3
-152:Circa Survive/Circa Survive - Violent Waves (2012)/03 - Suitcase.mp3
-153:Circa Survive/Circa Survive - Violent Waves (2012)/04 - The Lottery.mp3
-154:Circa Survive/Circa Survive - Violent Waves (2012)/05 - My Only Friend.mp3
-155:Circa Survive/Circa Survive - Violent Waves (2012)/06 - Phantasmagoria.mp3
-156:Circa Survive/Circa Survive - Violent Waves (2012)/07 - Think Of Me When They Sound.mp3
-157:Circa Survive/Circa Survive - Violent Waves (2012)/08 - Brother Song.mp3
-158:Circa Survive/Circa Survive - Violent Waves (2012)/09 - Bird Sounds.mp3
-159:Circa Survive/Circa Survive - Violent Waves (2012)/10 - Blood From A Stone.mp3
-160:Circa Survive/Circa Survive - Violent Waves (2012)/11 - I'll Find A Way.mp3
-161:The Black Keys/[2008] attack & release/[01] all you ever wanted.mp3
-162:The Black Keys/[2008] attack & release/[02] I got mine.mp3
-163:The Black Keys/[2008] attack & release/[03] strange times.mp3
-164:The Black Keys/[2008] attack & release/[04] psychotic girl.mp3
-165:The Black Keys/[2008] attack & release/[05] lies.mp3
-166:The Black Keys/[2008] attack & release/[06] remember when (side a).mp3
-167:The Black Keys/[2008] attack & release/[07] remember when (side b).mp3
-168:The Black Keys/[2008] attack & release/[08] same old thing.mp3
-169:The Black Keys/[2008] attack & release/[09] so he won't break.mp3
-170:The Black Keys/[2008] attack & release/[10] oceans & streams.mp3
-171:The Black Keys/[2008] attack & release/[11] things ain't like they used to be.mp3
-172:The Joy Formidable/The Big Roar/01 The Everchanging Spectrum Of A Lie.mp3
-173:The Joy Formidable/The Big Roar/02 The Magnifying Glass.mp3
-174:The Joy Formidable/The Big Roar/03 I Don't Want To See You Like This.mp3
-175:The Joy Formidable/The Big Roar/04 Austere.mp3
-176:The Joy Formidable/The Big Roar/05 A Heavy Abacus.mp3
-177:The Joy Formidable/The Big Roar/06 Whirring.mp3
-178:The Joy Formidable/The Big Roar/07 Buoy.mp3
-179:The Joy Formidable/The Big Roar/08 Maruyama.mp3
-180:The Joy Formidable/The Big Roar/09 Cradle.mp3
-181:The Joy Formidable/The Big Roar/10 Llaw = Wall.mp3
-182:The Joy Formidable/The Big Roar/11 Chapter 2.mp3
-183:The Joy Formidable/The Big Roar/12 The Greatest Light Is The Greatest Shade.mp3
-184:Saosin/Translating The Name/01 Seven Years.mp3
-185:Saosin/Translating The Name/02 Translating The Name.mp3
-186:Saosin/Translating The Name/03 3rd Measurement In C.mp3
-187:Saosin/Translating The Name/04 Lost Symphonies.mp3
-188:Saosin/Translating The Name/05 They Perched On Their Stilts, Pointing And Daring Me To Break Custom.mp3
+0:Saosin/Translating The Name/01 Seven Years.mp3
+1:Saosin/Translating The Name/02 Translating The Name.mp3
+2:Saosin/Translating The Name/03 3rd Measurement In C.mp3
+3:Saosin/Translating The Name/04 Lost Symphonies.mp3
+4:Saosin/Translating The Name/05 They Perched On Their Stilts, Pointing And Daring Me To Break Custom.mp3
+5:Kanye West/Jay Z and Kanye West - Watch The Throne (2011)/01 - No Church In The Wild (feat. Frank Ocean).mp3
+6:Kanye West/Jay Z and Kanye West - Watch The Throne (2011)/02 - Lift Off (feat. Beyonce).mp3
+7:Kanye West/Jay Z and Kanye West - Watch The Throne (2011)/03 - Nias In Paris.mp3
+8:Kanye West/Jay Z and Kanye West - Watch The Throne (2011)/04 - Otis (feat. Otis Redding).mp3
+9:Kanye West/Jay Z and Kanye West - Watch The Throne (2011)/05 - Gotta Have It.mp3
+10:Kanye West/Jay Z and Kanye West - Watch The Throne (2011)/06 - New Day.mp3
+11:Kanye West/Jay Z and Kanye West - Watch The Throne (2011)/07 - That's My Bitch.mp3
+12:Kanye West/Jay Z and Kanye West - Watch The Throne (2011)/09 - Who Gon Stop Me.mp3
+13:Kanye West/Jay Z and Kanye West - Watch The Throne (2011)/10 - Murder To Excellence.mp3
+14:Kanye West/Jay Z and Kanye West - Watch The Throne (2011)/08 - Welcome To The Jungle.mp3
+15:Kanye West/Jay Z and Kanye West - Watch The Throne (2011)/11 - Made In America (feat. Frank Ocean).mp3
+16:Kanye West/Jay Z and Kanye West - Watch The Throne (2011)/12 - Why I Love You (feat. Mr. Hudson).mp3
+17:Kanye West/Jay Z and Kanye West - Watch The Throne (2011)/13 - Illest Motherfker Alive.mp3
+18:Kanye West/Jay Z and Kanye West - Watch The Throne (2011)/14 - H•A•M.mp3
+19:Kanye West/Jay Z and Kanye West - Watch The Throne (2011)/15 - Primetime.mp3
+20:Kanye West/Jay Z and Kanye West - Watch The Throne (2011)/16 - The Joy (feat. Curtis Mayfield).mp3
+21:Kanye West/Jay Z and Kanye West - Watch The Throne (2011)/01 - No Church In The Wild (feat. Frank Ocean).mp3
+22:Kanye West/Jay Z and Kanye West - Watch The Throne (2011)/02 - Lift Off (feat. Beyonce).mp3
+23:Kanye West/Jay Z and Kanye West - Watch The Throne (2011)/03 - Nias In Paris.mp3
+24:Kanye West/Jay Z and Kanye West - Watch The Throne (2011)/04 - Otis (feat. Otis Redding).mp3
+25:Kanye West/Jay Z and Kanye West - Watch The Throne (2011)/05 - Gotta Have It.mp3
+26:Kanye West/Jay Z and Kanye West - Watch The Throne (2011)/06 - New Day.mp3
+27:Kanye West/Jay Z and Kanye West - Watch The Throne (2011)/07 - That's My Bitch.mp3
+28:Kanye West/Jay Z and Kanye West - Watch The Throne (2011)/09 - Who Gon Stop Me.mp3
+29:Kanye West/Jay Z and Kanye West - Watch The Throne (2011)/10 - Murder To Excellence.mp3
+30:Kanye West/Jay Z and Kanye West - Watch The Throne (2011)/08 - Welcome To The Jungle.mp3
+31:Kanye West/Jay Z and Kanye West - Watch The Throne (2011)/11 - Made In America (feat. Frank Ocean).mp3
+32:Kanye West/Jay Z and Kanye West - Watch The Throne (2011)/12 - Why I Love You (feat. Mr. Hudson).mp3
+33:Kanye West/Jay Z and Kanye West - Watch The Throne (2011)/13 - Illest Motherfker Alive.mp3
+34:Kanye West/Jay Z and Kanye West - Watch The Throne (2011)/14 - H•A•M.mp3
+35:Kanye West/Jay Z and Kanye West - Watch The Throne (2011)/15 - Primetime.mp3
+36:Kanye West/Jay Z and Kanye West - Watch The Throne (2011)/16 - The Joy (feat. Curtis Mayfield).mp3
+37:Jay-Z/Jay-Z - The Black Album/09 - Jay-z - 99 problems (produced by rick rubin)-21st.mp3
+38:T.I/T.I. - Paper Trail [2008][CD+3 SkidVid_XviD+Cov]320Kbps/13  T.I. - Swagga Like Us [Ft. Jay-Z,Kanye West,Lil' Wayne].mp3
+39:Young Jeezy/Young Jeezy - The Recession[2008][MP3@320kbps]-antecho/18 My President.mp3
+40:J. Cole/J. Cole - Cole World The Sideline Story (2011)/07 - Mr. Nice Watch (feat. Jay-Z).mp3
+41:J. Cole/J. Cole - Cole World The Sideline Story (2011)/13 - Rise And Shine.mp3
+42:Kid Cudi/Kid CuDi-Man On The Moon The End Of Day[2009][320kbps]/15-kid cudi-up up & away.mp3
+43:Kid Cudi/Kid CuDi-Man On The Moon The End Of Day[2009][320kbps]/02-kid cudi-soundtrack 2 my life.mp3
+44:Lil Wayne/103 - A Milli (Produced By Bangladesh).mp3
+45:Lupe Fiasco/Lupe_Fiasco-The_Cool-(RapGodFathers.com)/03-Lupe Fiasco - Go Go Gadget Flow-RGF.mp3
+46:B.O.B/B.O.B._feat_Andre_3000_-_Play_The_Guitar.mp3
+47:B.O.B/B.O.B._feat_Andre_3000_-_Play_The_Guitar.mp3
+48:Fort Minor/The_Rising_Tied/07-fort_minor-in_stereo.mp3
+49:Fort Minor/The_Rising_Tied/02-fort_minor-remember_the_name_(feat._styles_of_beyond).mp3
+50:J. Cole/J. Cole - Cole World The Sideline Story (2011)/07 - Mr. Nice Watch (feat. Jay-Z).mp3
+51:B.O.B/Unknown-B_o_B-No_Genre/Unknown-B.o.B-No_Genre/04-B.o.B-Feet_Don_t_Fail_Me_Now_Feat_T.I_Spodee_Prod_by_Kutta.mp3
+52:B.O.B/Strange Clouds/05 - Strange Clouds Feat. Lil Wayne.mp3
+53:Kid Cudi/www.NewAlbumReleases.net_Kid Cudi - Man On The Moon II The Legend Of Mr. Rager (2010)/Kid Cudi - Man On The Moon II The Legend Of Mr. Rager (2010)/04 - We Aite (Wake Your Mind Up).mp3
+54:Kid Cudi/www.NewAlbumReleases.net_Kid Cudi - Man On The Moon II The Legend Of Mr. Rager (2010)/Kid Cudi - Man On The Moon II The Legend Of Mr. Rager (2010)/13 - These Worries.mp3
+55:Kid Cudi/www.NewAlbumReleases.net_Kid Cudi - Man On The Moon II The Legend Of Mr. Rager (2010)/Kid Cudi - Man On The Moon II The Legend Of Mr. Rager (2010)/16 - GHOST!.mp3
+56:Kid Cudi/www.NewAlbumReleases.net_Kid Cudi - Man On The Moon II The Legend Of Mr. Rager (2010)/Kid Cudi - Man On The Moon II The Legend Of Mr. Rager (2010)/08 - Erase Me.mp3
+57:MGMT/MGMT - Oracular Spectacular [2008]/04 - Electric Feel.mp3
+58:MGMT/MGMT - Oracular Spectacular [2008]/05 - Kids.mp3
+59:MGMT/MGMT - Oracular Spectacular [2008]/01 - Time to Pretend.mp3
+60:XV/XV- Zero Heroes (DatPiff.com)/10 - XV-UFC Feat Kristina Rose Prod By Seven.mp3
+61:Mac Miller/Mac Miller - Blue Slide Park (2011)/06 - Smile Back.mp3
+62:T.I/T.I. - Paper Trail [2008][CD+3 SkidVid_XviD+Cov]320Kbps/10  T.I. - Swing Ya Rag [Ft. Swizz Beatz].mp3
+63:Arctic Monkeys/Favourite Worst Nightnmare/05-arctic_monkeys-flourescent_adolescent.mp3
+64:Arctic Monkeys/Favourite Worst Nightnmare/05-arctic_monkeys-flourescent_adolescent.mp3
+65:Arctic Monkeys/Favourite Worst Nightnmare/05-arctic_monkeys-flourescent_adolescent.mp3
+66:vampire weekend/Vampire Weekend - Vampire Weekend/08 One (Blake's Got A New Face).mp3
+67:vampire weekend/Vampire Weekend - Vampire Weekend/08 One (Blake's Got A New Face).mp3
+68:vampire weekend/Vampire Weekend - Vampire Weekend/08 One (Blake's Got A New Face).mp3
+69:M.I.A/Paper Planes.MP3
+70:Mika/Life In Cartoon Motion [2007][CD+SkidVid+Cov]/01  Mika - Grace Kelly.mp3
+71:vampire weekend/Vampire Weekend - Vampire Weekend/02 Oxford Comma.mp3
+72:Gorillaz/Demon_Days/Demon Days/15 - Demon Days.mp3
+73:Gorillaz/Gorillaz/Gorillaz/Gorillaz- Clint Eastwood.mp3
+74:Kanye West/Kanye West  - We Major[2009]/15.Kanye West and Jay-Z - Goldigger (Fyre RMX).mp3
+75:Gorillaz/Demon_Days/Demon Days/06 - Feel Good Inc.mp3
+76:The Lonely Island/Incredibad/04 I'm On A Boat (feat. T-Pain).mp3
+77:Clipse/Clipse - Fast Life [Group Rip][Explicit][2009]/04. Trill Ft. Pharrell.mp3
+78:Jay-Z/The Blueprint 3/07 On To the Next One (feat. Swizz B.mp3
+79:LMFAO/Party Rock/09-lmfao-shots_(featuring_lil_jon).mp3
+80:Super Mash Bros/super-mash-bros-all-about-the-scrillions/all-about-the-scrillions/05-@LaurenConrad_Get_Us_On_The_Hills!.mp3
+81:Clipse/Clipse - Fast Life [Group Rip][Explicit][2009]/10. Mr. Me Too Ft. Pharrell.mp3
+82:Chiddy Bang/Chiddy Bang - Peanut Butter & Swelly (DatPiff.com)/06 - Guinness Flow.mp3
+83:Chiddy Bang/Chiddy Bang - Peanut Butter & Swelly (DatPiff.com)/03 - Heatwave (Ft Mac Miller Trae The Truth & Casey Veggies).mp3
+84:Common/Common Universal Mind Control/01 Intro_Universal Mind Control (UMC) (Feat. Pharrell).mp3
+85:FM/FM_-_Like_A_G6.mp3
+86:J. Cole/J. Cole - Cole World The Sideline Story (2011)/03 - Can't Get Enough (feat. Trey Songz).mp3
+87:Kanye West/Kanye West - My Beautiful Dark Twisted Fantasy [Dirty] (2010)/05 - All Of The Lights.mp3
+88:The Game/The Game - Doctors Advocate [2006]/03 - It's Okay (One Blood) (Produced By Reefa).mp3
+89:XV/XV- Zero Heroes (DatPiff.com)/10 - XV-UFC Feat Kristina Rose Prod By Seven.mp3
+90:LCD Soundsystem/LCD Soundsystem - LCD Soundsystem [2005]/LCD Soundsystem - LCD Soundsystem (Disc 1)/01 - Daft Punk Is Playing At My House.mp3
+91:3oh3/Want/Want/03-3oh3-dont_trust_me.mp3
+92:Awolnation/Megalithic Symphony (2011)/10 - Sail.mp3
+93:Janelle Monae/Janelle_Monae-The_ArchAndroid-2010-C4/Janelle_Monae-The_ArchAndroid-2010-C4/06-janelle_monae-cold_war.mp3
+94:Janelle Monae/Janelle_Monae-The_ArchAndroid-2010-C4/Janelle_Monae-The_ArchAndroid-2010-C4/07-janelle_monae-tightrope_(feat._big_boi).mp3
+95:Kid Cudi/Plain Pat and Emile Present - KiD CuDi - a KiD named CuDi/Plain Pat and Emile Present - KiD CuDi - a KiD named CuDi/02 Down & Out.mp3
+96:The Dirty Heads/The_Dirty_Heads-Any_Port_In_A_Storm_(Special_Edition)-2010-SOM/20-the_dirty_heads-lay_me_down-som.mp3
+97:Gym Class Heroes/Gym_Class_Heroes-The_Quilt/Gym_Class_Heroes-The_Quilt-2008-RTB/Gym_Class_Heroes-The_Quilt-2008-RTB/07-gym_class_heroes-cookie_jar.mp3
+98:Gym Class Heroes/Gym_Class_Heroes-The_Quilt/Gym_Class_Heroes-The_Quilt-2008-RTB/Gym_Class_Heroes-The_Quilt-2008-RTB/07-gym_class_heroes-cookie_jar.mp3
+99:Kenna/00 - Face The Gun.mp3
+100:Kenna/00 - Face The Gun.mp3
+101:Ludacris/Red Light District/03-Ludacris Get Back.mp3
+102:Mutemath/02 Typical.mp3
+103:N.E.R.D/N.E.R.D. - Seeing Sounds [2008]/N.E.R.D. - Everyone Nose (All The Girls S.mp3
+104:Sum 41/All Killer No Filler/04 Fat Lip.mp3
+105:Travis Barker/Travis_Barker-Give_The_Drummer_Some-2011-CR/07-travis_barker-lets_go_(feat._yelawolf_twista_busta_rhymes_lil_jon).mp3
+106:Cage The Elephant/Cage The Elephant - Cage The Elephant/03 - Cage The Elephant - Aint No Rest For The Wicked.mp3
+107:Hollywood Undead/Swan Songs/01 Undead.mp3
+108:ModeStep/Modestep - Feel Good.mp3
+109:Guster/Guster - Ganging Up On the Sun [2006]/02 - Satellite.mp3
+110:Annuals/Annuals - Such Fun (2008)/02 Hot Night Hounds.mp3
+111:Cold War Kids/Cold_War_Kids-Behave_Yourself-(EP)-2010-CRN/02-cold_war_kids-coffee_spoon-crn.mp3
+112:Coldplay/Coldplay - Mylo Xyloto (2011)/03 - Paradise.mp3
+113:Crash Kings/Crash_Kings-Crash_Kings-2009-FNT/01-crash_kings-mountain_man.mp3
+114:Death Cab For Cutie/Death Cab for Cutie - Codes and Keys (2011)/05 - You Are a Tourist.mp3
+115:Jimmy Eat World/Bleed American/03 The Middle.mp3
+116:Jimmy Eat World/Bleed American/05 Sweetness.mp3
+117:Maps & Atlases/Perch Patchwork/12 Perch Patchwork.mp3
+118:Pheonix/Phoenix - Wolfgang Amadeus Phoenix [mp3-160-2009]/02 - 1901.mp3
+119:Maps & Atlases/Perch Patchwork/01 Will.mp3
+120:Maps & Atlases/Perch Patchwork/02 The Charm.mp3
+121:Maps & Atlases/Perch Patchwork/03 Living Decorations.mp3
+122:Maps & Atlases/Perch Patchwork/04 Solid Ground.mp3
+123:Maps & Atlases/Perch Patchwork/05 Is.mp3
+124:Maps & Atlases/Perch Patchwork/06 Israeli Caves.mp3
+125:Maps & Atlases/Perch Patchwork/07 Banished Be Cavalier.mp3
+126:Maps & Atlases/Perch Patchwork/08 Carrying The Wet Wood.mp3
+127:Maps & Atlases/Perch Patchwork/09 Pigeon.mp3
+128:Maps & Atlases/Perch Patchwork/10 If This Is.mp3
+129:Maps & Atlases/Perch Patchwork/11 Was.mp3
+130:Maps & Atlases/Perch Patchwork/12 Perch Patchwork.mp3
+131:Maps & Atlases/Tree, Swallows, Houses/01 Every Place Is A House.mp3
+132:Maps & Atlases/Tree, Swallows, Houses/02 The Most Trustworthy Tin Cans.mp3
+133:Maps & Atlases/Tree, Swallows, Houses/03 The Ongoing Horrible.mp3
+134:Maps & Atlases/Tree, Swallows, Houses/04 Big Bopper Anthems.mp3
+135:Maps & Atlases/Tree, Swallows, Houses/05 Stories About Ourselves.mp3
+136:Maps & Atlases/Tree, Swallows, Houses/06 The Sounds They Make.mp3
+137:Maps & Atlases/Tree, Swallows, Houses/07 Songs For Ghosts To Haunt To.mp3
 playlist_end
