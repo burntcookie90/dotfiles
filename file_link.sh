@@ -8,3 +8,4 @@ ln -fi .xinitrc ~/
 ln -fi .xmobarrc ~/
 ln -fi .zshrc ~/
 ln -fi .config/Terminal/terminalrc ~/.config/Terminal/terminalrc
+ln -fi .xmonad/xmonad.hs ~/.xmonad/xmonad.hs

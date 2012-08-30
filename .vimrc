@@ -34,10 +34,6 @@ set undodir=~/.vim/undodir
 set undofile
 
 
-""undo
-set undodir=~/.vim/undodir
-set undofile
-
 "" plug-in settings
 filetype plugin on
 filetype indent on
@@ -59,7 +55,7 @@ nmap <F8> :TagbarToggle<CR>
 
 ""gundo
 let g:gundo_width = 45
-nnoremap <F5> :GundoToggle<CR>
+nnoremap <F3> :GundoToggle<CR>
 "let g:gundo_preview_bottom = 1
 
 ""NERDTree
@@ -77,7 +73,7 @@ let g:NERDTreeShowHidden = 1
 ""statusline
 set statusline=%{fugitive#statusline()}
 set nocompatible   " Disable vi-compatibility
-set laststatus=2   " Always show the statusline
+"set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs   "
 "let g:Powerline_symbols = 'unicode'
 
@@ -93,4 +89,9 @@ set cursorline cursorcolumn
 
 "LaTeX rules
 "let g:Tex_CompileRule_pdf
+"let g:Tex_FormatDependency_pdf = 'dvi,ps,pdf'
+let g:Tex_MultipleCompileFormats='pdf'
 let g:tex_flavor='latex'
+autocmd FileType tex setlocal spell spelllang=en_us
+
+set clipboard=unnamed

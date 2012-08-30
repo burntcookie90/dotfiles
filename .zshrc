@@ -23,6 +23,7 @@ alias 3012='cd ~/Dropbox/GT\ Documents/2011-2012/Spring\ 2012/MATH3012'
 alias 3510='cd /home/vishnu/Dropbox/GT\ Documents/2012-2013/Fall2012/CS3510'
 alias 3251='cd /home/vishnu/Dropbox/GT\ Documents/2012-2013/Fall2012/CS3251'
 alias 3210='cd /home/vishnu/Dropbox/GT\ Documents/2012-2013/Fall2012/CS3210'
+alias Senior_Design='cd /home/vishnu/Dropbox/GT\ Documents/2012-2013/Fall2012/Senior_Design'
 alias vaio='ssh -p 24 index.vishnurajeevan.com'
 alias rpi='ssh -p 23 index.vishnurajeevan.com'
 alias desktop='ssh index.vishnurajeevan.com'
@@ -58,7 +59,7 @@ alias transmission="transmission-cli -b -er -u 5"
 alias youtube-mp3="youtube-dl -t --extract-audio --audio-format mp3 --audio-quality 320k"
 alias pathogen="cd ~/.vim/bundle;git clone "
 alias mirror_web="wget -rmk"
-alias music="ncmpcpp"
+alias music="ncmpcpp -h 192.168.1.100"
 alias TV='cd ~/Videos/TV'
 alias steam='WINEDEBUG=-all wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Steam/Steam.exe >/dev/null 2>&1 &'
 autoload -U promptinit
