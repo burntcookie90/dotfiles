@@ -13,7 +13,7 @@ alias rpi='ssh -p 23 index.vishnurajeevan.com'
 alias pathogen_add="git submodule add "
 alias pathogen_upgrade="git submodule foreach git pull origin master"
 alias vlcn="vlc -I ncurses"
-alias vlc="vlc --extraintf=http"
+alias vlc="vlc --extraintf=http --no-ffmpeg-hw"
 alias vimconfig="vim ~/.vimrc"
 alias zshconfig="vim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"

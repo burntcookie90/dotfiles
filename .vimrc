@@ -76,6 +76,11 @@ set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs   "
 "let g:Powerline_symbols = 'unicode'
 
+"highlight current column and line
+au WinLeave * set nocursorline nocursorcolumn
+au WinEnter * set cursorline cursorcolumn
+set cursorline cursorcolumn
+
 "restore cursor position in files
 if has("autocmd")
 		au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif

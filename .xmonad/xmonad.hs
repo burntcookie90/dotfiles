@@ -249,6 +249,7 @@ defaultLayout = tiled ||| Mirror tiled ||| Full ||| simpleTabbed ||| spiral (6/7
 --
 myManageHook = composeAll
     [ className =? "MPlayer"        --> doFloat
+	, className=? "Google-musicmanager" --> doFloat
 --	, className =? "Vlc"            --> doFloat
     , className =? "Gimp"           --> doFloat
 	, className =? "Orage"          --> doFloat
