@@ -9,3 +9,4 @@ ln -sfi ~/dotfiles/.xmobarrc ~/
 ln -sfi ~/dotfiles/.zshrc ~/
 ln -sfi /home/vishnu/dotfiles/.xmonad/xmonad.hs ~/.xmonad/
 ln -sfi /home/vishnu/dotfiles/.mpd/mpd.conf ~/.mpd
+ln -sfi /home/vishnu/dotfiles/.ncmpcppc /home/vishnu/

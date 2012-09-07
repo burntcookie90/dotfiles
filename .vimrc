@@ -54,7 +54,7 @@ nmap <F8> :TagbarToggle<CR>
 
 ""gundo
 let g:gundo_width = 45
-nnoremap <F5> :GundoToggle<CR>
+nnoremap <F3> :GundoToggle<CR>
 "let g:gundo_preview_bottom = 1
 
 ""NERDTree
@@ -85,3 +85,11 @@ set cursorline cursorcolumn
 if has("autocmd")
 		au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 endif 
+
+
+"LaTeX rules
+"let g:Tex_CompileRule_pdf
+let g:Tex_FormatDependency_pdf = 'dvi,ps,pdf'
+let g:Tex_MultipleCompileFormats='pdf'
+let g:tex_flavor='latex'
+autocmd FileType tex setlocal spell spelllang=en_us

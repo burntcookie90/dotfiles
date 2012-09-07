@@ -8,8 +8,8 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="afowler"
 
 # Example aliases
-alias vaio='ssh -p 24 index.vishnurajeevan.com'                                                                                                                                               
-alias rpi='ssh -p 23 index.vishnurajeevan.com'
+alias vaio='ssh -p 24 192.168.1.102'
+alias rpi='ssh -p 23 192.168.1.100 -t tmux'
 alias pathogen_add="git submodule add "
 alias pathogen_upgrade="git submodule foreach git pull origin master"
 alias vlcn="vlc -I ncurses"
@@ -24,6 +24,10 @@ alias spring12='cd ~/Dropbox/GT\ Documents/2011-2012/Spring\ 2012/'
 alias 2200='cd ~/Dropbox/GT\ Documents/2011-2012/Spring\ 2012/CS2200'
 alias 3300='cd ~/Dropbox/GT\ Documents/2011-2012/Spring\ 2012/CS3300'
 alias 3012='cd ~/Dropbox/GT\ Documents/2011-2012/Spring\ 2012/MATH3012'
+alias 3510='cd /home/vishnu/Dropbox/GT\ Documents/2012-2013/Fall2012/CS3510'
+alias 3251='cd /home/vishnu/Dropbox/GT\ Documents/2012-2013/Fall2012/CS3251'
+alias 3210='cd /home/vishnu/Dropbox/GT\ Documents/2012-2013/Fall2012/CS3210'
+alias Senior_Design='cd /home/vishnu/Dropbox/GT\ Documents/2012-2013/Fall2012/Senior_Design'
 alias fall12='cd ~/Dropbox/GT\ Documents/2012-2013/Fall2012/'
 alias gmail='google-chrome --app=http://mail.google.com'
 alias nautilus='nautilus .'
