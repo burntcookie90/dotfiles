@@ -1,0 +1,117 @@
+# Others
+####################################################
+## this is example configuration file, copy it to ##
+## ~/.ncmpcpp/config and set up your preferences  ##
+####################################################
+#
+##### directories ######
+##
+## Directory for storing ncmpcpp related files.
+## Changing it is useful if you want to store
+## everything somewhere else and provide command
+## line setting for alternative location to config
+## file which defines that while launching ncmpcpp.
+##
+#
+#ncmpcpp_directory = "~/.ncmpcpp"
+#
+##
+## Directory for storing downloaded lyrics. It
+## defaults to ~/.lyrics since other MPD clients
+## (eg. ncmpc) also use that location.
+##
+#
+#lyrics_directory = "~/.lyrics"
+#
+##### connection settings #####
+#
+## set it in order to make tag editor and renaming files work properly
+#
+mpd_host = "localhost"
+#
+mpd_port = "6600"
+#
+mpd_music_dir = "~/Music"
+
+#song_window_title_format = "MPD: {%a > }{%t}{ [%b{ Disc %d}]}|{%f}"
+#search_engine_display_mode = "columns" (classic/columns)
+#follow_now_playing_lyrics = "yes"
+#display_screens_numbers_on_start = "no"
+#mpd_music_dir = "/mnt/DD-Papey/Papey\ Home/Musique"
+
+## Playlist
+#song_columns_list_format = "(6f)[blue]{l} (25)[red]{a} (40)[green]{t|f} (30)[yellow]{b}"
+#now_playing_prefix = "$b$5»$7»$1» "
+#now_playing_suffix = "$/b"
+#playlist_display_mode = "columns" (classic/columns)
+#autocenter_mode = "yes"
+#centered_cursor = "yes"
+
+## Bars
+#song_status_format = "$2%a $2• $3%t $2• $4%b {(Disc %d) }$2• $5%y$1"
+#progressbar_look = "─╼·"
+#titles_visibility = "no"
+
+## Browser
+#browser_playlist_prefix = "$2plist »$9 "
+#browser_display_mode = "columns" (classic/columns)
+
+# Colors
+#discard_colors_if_item_is_selected = "yes"
+#header_window_color = "blue"
+#volume_color = "cyan"
+#state_line_color = "green"
+#state_flags_color = "yellow"
+#main_window_color = "white"
+#color1 = "default"
+#color2 = "green"
+#main_window_highlight_color = "red"
+#progressbar_color = "yellow"
+#statusbar_color = "white"
+#active_column_color = "red"
+#visualizer_color = "yellow"
+#colors_enabled = "yes"
+#discard_colors_if_item_is_selected = "yes"
+#header_window_color = "yellow"
+#volume_color = "cyan"
+#state_line_color = "white"
+#state_flags_color = "yellow"
+#main_window_color = "white"
+#color1 = "cyan"
+#color2 = "green"
+#main_window_highlight_color = "yellow"
+#progressbar_color = "yellow"
+#statusbar_color = "green"
+#active_column_color = "green"
+#visualizer_color = "yellow"
+#song_window_title_format = "MPD: {%a > }{%t}{ [%b{ Disc %d}]}|{%f}"
+
+
+
+song_list_format = "{%a - }{%t}|{$8%f$9}$R{$3(%l)$9}"
+song_status_format = "{{%a{ \"%b\"{ (%y)}} - }{%t}}|{%f}"
+song_library_format = "{%d.}{%n - }{%t}"
+alternative_header_first_line_format = "$b$1$aqqu$/a$9 {%t}|{%f}
+$1$atqq$/a$9$/b"
+song_window_title_format = "{%a - }{%t}|{%f}"
+song_columns_list_format = "(7f)[green]{l} (25)[blue]{a} (40)[]{t|f}
+(30)[blue]{b}"
+playlist_display_mode = "columns" (classic/columns)
+browser_display_mode = "columns" (classic/columns)
+progressbar_look = "=|"
+user_interface = "classic" (classic/alternative)
+media_library_left_column = "A" (possible values: a,y,g,c,p, legend above)
+header_visibility = "yes"
+titles_visibility = "yes"
+display_volume_level = "yes"
+display_bitrate = "yes"
+display_remaining_time = "yes"
+ignore_leading_the = "yes"
+allow_physical_files_deletion = "yes"
+allow_physical_directories_deletion = "yes"
+colors_enabled = "yes"
+main_window_color = "white"
+color1 = "white"
+progressbar_color = "yellow"
+statusbar_color = "yellow"
+

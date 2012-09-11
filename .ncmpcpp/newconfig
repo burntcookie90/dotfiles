@@ -1,0 +1,53 @@
+# Others
+song_window_title_format = "MPD: {%a > }{%t}{ [%b{ Disc %d}]}|{%f}"
+search_engine_display_mode = "columns" (classic/columns)
+follow_now_playing_lyrics = "yes"
+display_screens_numbers_on_start = "no"
+mpd_music_dir = "/mnt/DD-Papey/Papey\ Home/Musique"
+
+# Playlist
+song_columns_list_format = "(6f)[blue]{l} (25)[red]{a} (40)[green]{t|f} (30)[yellow]{b}"
+now_playing_prefix = "$b$5»$7»$1» "
+now_playing_suffix = "$/b"
+playlist_display_mode = "columns" (classic/columns)
+autocenter_mode = "yes"
+centered_cursor = "yes"
+
+# Bars
+song_status_format = "$2%a $2• $3%t $2• $4%b {(Disc %d) }$2• $5%y$1"
+progressbar_look = "─╼·"
+titles_visibility = "no"
+
+# Browser
+browser_playlist_prefix = "$2plist »$9 "
+browser_display_mode = "columns" (classic/columns)
+
+# Colors
+discard_colors_if_item_is_selected = "yes"
+header_window_color = "blue"
+volume_color = "cyan"
+state_line_color = "green"
+state_flags_color = "yellow"
+main_window_color = "white"
+color1 = "default"
+color2 = "green"
+main_window_highlight_color = "red"
+progressbar_color = "yellow"
+statusbar_color = "white"
+active_column_color = "red"
+visualizer_color = "yellow"
+colors_enabled = "yes"
+discard_colors_if_item_is_selected = "yes"
+header_window_color = "yellow"
+volume_color = "cyan"
+state_line_color = "white"
+state_flags_color = "yellow"
+main_window_color = "white"
+color1 = "cyan"
+color2 = "green"
+main_window_highlight_color = "yellow"
+progressbar_color = "yellow"
+statusbar_color = "green"
+active_column_color = "green"
+visualizer_color = "yellow"
+song_window_title_format = "MPD: {%a > }{%t}{ [%b{ Disc %d}]}|{%f}"
