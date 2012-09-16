@@ -19,6 +19,8 @@ import XMonad.Layout.NoBorders
 import XMonad.Layout.PerWorkspace
 import XMonad.Layout.Spiral
 import XMonad.Layout.Tabbed
+import XMonad.Layout.MultiToggle
+import XMonad.Layout.MultiToggle.Instances
 
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
@@ -27,7 +29,7 @@ import qualified Data.Map        as M
 -- certain contrib modules.
 --
 {-myTerminal      = "terminator -p mydefaults"-}
-myTerminal = "terminal"
+myTerminal = "urxvt"
 
 -- Whether focus follows the mouse pointer.
 myFocusFollowsMouse :: Bool
@@ -48,6 +50,7 @@ myModMask       = mod1Mask
 nobordersLayout = noBorders $ Full 
 
 nobordersOrStrutsLayout = avoidStruts ( nobordersLayout )
+
 
 -- The default number of workspaces (virtual screens) and their names.
 -- By default we use numeric strings, but any string may be used as a
@@ -151,6 +154,15 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 	--toggle touchpad
 	, ((modm 		   , 0xffc6), spawn "synclient TouchpadOff=$(synclient -l | grep -c 'TouchpadOff.*=.*0')")
 
+	--toggle left rotate
+	, ((modm .|. shiftMask, xK_h), spawn "xrandr -o left")
+
+	--toggle right rotate
+	, ((modm .|. shiftMask, xK_l), spawn "xrandr -o right")
+	
+	--togle normal rotate
+	, ((modm .|. shiftMask, xK_n), spawn "xrandr -o normal")
+
     -- Toggle the status bar gap
     -- Use this binding with avoidStruts from Hooks.ManageDocks.
     -- See also the statusBar function from Hooks.DynamicLog.
@@ -213,7 +225,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 -- The available layouts.  Note that each layout is separated by |||,
 -- which denotes layout choice.
 --
-defaultLayout = tiled ||| Mirror tiled ||| Full ||| simpleTabbed ||| spiral (6/7)
+defaultLayout = tiled ||| Mirror tiled ||| Full ||| simpleTabbed
   where
      -- default tiling algorithm partitions the screen into two panes
      tiled   = Tall nmaster delta ratio
