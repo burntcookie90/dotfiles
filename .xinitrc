@@ -12,6 +12,7 @@
 #fi
 #DEFAULT_SESSION=exec ck-launch-session dbus-launch startxfce4
 
+#set the cursor
 xsetroot -cursor_name left_ptr
 #case $1 in
 	#xfce4)
@@ -19,12 +20,11 @@ xsetroot -cursor_name left_ptr
 		#;;
 	#xmonad)
 		/usr/bin/xscreensaver -no-splash &
-		trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 4 --transparent true --alpha 0 --tint 0x000000 --height 16 &  
+		trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 4 --transparent true --alpha 0 --tint 0x000000 --height 17 &  
 		wicd-client --tray &
 		sh ~/.fehbg &
 		dropbox start &
 		exec dbus-launch xmonad
-		#set the cursor
 		#;;
 	#awesome)
 			#exec awesome

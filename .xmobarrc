@@ -1,4 +1,4 @@
-Config { font = "xft:Bitstream Vera Sans Mono:size=9:bold:antialias=true"  
+Config { font = "xft:Inconsolata :size=10:antialias=true"  
      , bgColor = "#000000"  
      , fgColor = "#33B5E5"  
      , position = TopW L 97
@@ -7,9 +7,9 @@ Config { font = "xft:Bitstream Vera Sans Mono:size=9:bold:antialias=true"
 			 , Run Com "~/battery.sh" [] "battery" 10
              , Run Memory ["-t","Mem: <usedratio>%"] 10  
              , Run Com "~/cputemp.sh" [] "temp" 10  
-           , Run Date "%a %b %_d %l:%M" "date" 10  
+		     , Run Date "%a %b %_d %l:%M" "date" 10  
              , Run Com "~/volume.sh" [] "volume" 10  
-           , Run StdinReader  
+		   	 , Run StdinReader  
            ]  
      , sepChar = "%"  
      , alignSep = "}{"  

@@ -29,7 +29,7 @@ import qualified Data.Map        as M
 -- certain contrib modules.
 --
 {-myTerminal      = "terminator -p mydefaults"-}
-myTerminal = "urxvt"
+myTerminal = "terminal"
 
 -- Whether focus follows the mouse pointer.
 myFocusFollowsMouse :: Bool
@@ -162,6 +162,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 	
 	--togle normal rotate
 	, ((modm .|. shiftMask, xK_n), spawn "xrandr -o normal")
+	
+	--open thunar
+	{-, ((0xffeb .|. 		, xK_e), spawn "thunar")-}
 
     -- Toggle the status bar gap
     -- Use this binding with avoidStruts from Hooks.ManageDocks.

@@ -7,8 +7,8 @@ set autoindent
 set nowrap
 
 "" Automatically resize vertical splits.
-"":au WinEnter * :set winfixheight
-"":au WinEnter * :wincmd =
+":au WinEnter * :set winfixheight
+":au WinEnter * :wincmd =
 
 ""set tab spacing to 4
 set ts=4
@@ -71,7 +71,7 @@ let g:NERDTreeShowHidden = 1
 
 
 ""statusline
-set statusline=%{fugitive#statusline()}
+"set statusline=%{fugitive#statusline()}
 set nocompatible   " Disable vi-compatibility
 "set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs   "
@@ -95,3 +95,6 @@ let g:tex_flavor='latex'
 autocmd FileType tex setlocal spell spelllang=en_us
 
 set clipboard=unnamed
+
+
+autocmd FileType c :nnoremap <F5> :!make<CR>

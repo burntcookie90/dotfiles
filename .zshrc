@@ -8,6 +8,10 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="afowler"
 
 # Example aliases
+alias tmux="tmux -2"
+alias factor_ssh="ssh factor-3210.cc.gatech.edu -l vrajeevan3"
+alias pathogen_add="git submodule add "
+alias pathogen_upgrade="git submodule foreach git pull origin master"
 alias vlcn="vlc -I ncurses"
 alias vlc="vlc --extraintf=http"
 alias vimconfig="vim ~/.vimrc"
@@ -15,7 +19,7 @@ alias zshconfig="vim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias droprestart="dropbox stop; dropbox start"
 alias chromium_socks="chromium --proxy-server="socks://127.0.0.1:1080" --user-data-dir=~/SOCKS"
-alias SOCKS="ssh -C -D 1080 index.vishnurajeevan.com"
+alias SOCKS="ssh -C -D 1080 -p 24 index.vishnurajeevan.com"
 alias spring12='cd ~/Dropbox/GT\ Documents/2011-2012/Spring\ 2012/'
 alias 2200='cd ~/Dropbox/GT\ Documents/2011-2012/Spring\ 2012/CS2200'
 alias 3300='cd ~/Dropbox/GT\ Documents/2011-2012/Spring\ 2012/CS3300'
@@ -101,6 +105,8 @@ setopt completealiases
 
 
 #exports
+export PATH=$PATH:/home/vishnu/wfdb/bin
+export LD_LIBRARY_PATH=/home/vishnu/wfdb/lib:/home/vishnu/wfdb/lib64
 #export PATH=$PATH:/opt/android-sdk/platform-tools/
 #export PATH=$PATH:/home/vishnu/bin/
 export EDITOR=vim
