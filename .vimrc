@@ -50,6 +50,8 @@ colorscheme jellybeans
 ""colorscheme cleanroom
 ""
 
+""pastmode toggle
+nmap <F4> :set paste!<CR>
 ""tagbar toggler
 nmap <F8> :TagbarToggle<CR>
 
