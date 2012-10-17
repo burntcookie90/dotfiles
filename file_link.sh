@@ -11,3 +11,4 @@ ln -sfi /home/vishnu/dotfiles/.zshrc /home/vishnu/
 ln -sfi /home/vishnu/dotfiles/.config/Terminal/terminalrc /home/vishnu/.config/Terminal/terminalrc
 ln -sfi /home/vishnu/dotfiles/.xmonad/xmonad.hs /home/vishnu/.xmonad/xmonad.hs
 ln -sfi /home/vishnu/dotfiles/.Xresources /home/vishnu/
+ln -sfi /home/vishnu/dotfiles/oh-my-zsh /home/vishnu/.oh-my-zsh
