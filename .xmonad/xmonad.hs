@@ -133,35 +133,35 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- Increment the number of windows in the master area
     , ((modm              , xK_comma ), sendMessage (IncMasterN 1))
-
     -- Deincrement the number of windows in the master area
     , ((modm              , xK_period), sendMessage (IncMasterN (-1)))
 
-	-- mute volume
-	, ((0              , 0x1008ff12), spawn "amixer set Master toggle") 
-	-- lower volume
-	, ((0              , 0x1008ff11), spawn "amixer set Master 2%-")
+	{-[>-- mute volume<]-}
+	,((0              , 0x1008ff12), spawn "amixer set Master toggle") 
+	{-[>-- lower volume<]-}
+	,((0              , 0x1008ff11), spawn "amixer set Master 2%-")
 
-	--raise volume
-	, ((0              , 0x1008ff13), spawn "amixer set Master 2%+")
+	{-[>--raise volume]-}
+	,((0              , 0x1008ff13), spawn "amixer set Master 2%+")
 
 	--take screenshot
 	, ((0              , 0xff61), spawn "import -window root ~/Dropbox/Public/`date '+%Y%m%d-%H%M%S'`.png")
 
 	--lock computer
-	, ((0 			   , 0x1008ff2d), spawn "xscreensaver-command -lock")
+	, ((0 			, 0x1008ff41), spawn "xscreensaver-command -lock")
+
 
 	--toggle touchpad
-	, ((modm 		   , 0xffc6), spawn "synclient TouchpadOff=$(synclient -l | grep -c 'TouchpadOff.*=.*0')")
+	, ((0 			, 0x1008ff2d), spawn "synclient TouchpadOff=$(synclient -l | grep -c 'TouchpadOff.*=.*0')")
 
-	--toggle left rotate
-	, ((modm .|. shiftMask, xK_h), spawn "xrandr -o left")
+	{---toggle left rotate-}
+	{-, ((modm .|. shiftMask, xK_h), spawn "xrandr -o left")-}
 
-	--toggle right rotate
-	, ((modm .|. shiftMask, xK_l), spawn "xrandr -o right")
+	{---toggle right rotate-}
+	{-, ((modm .|. shiftMask, xK_l), spawn "xrandr -o right")-}
 	
-	--togle normal rotate
-	, ((modm .|. shiftMask, xK_n), spawn "xrandr -o normal")
+	{---togle normal rotate-}
+	{-, ((modm .|. shiftMask, xK_n), spawn "xrandr -o normal")-}
 	
 	--open thunar
 	{-, ((0xffeb .|. 		, xK_e), spawn "thunar")-}

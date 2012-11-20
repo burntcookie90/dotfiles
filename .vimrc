@@ -100,3 +100,4 @@ set clipboard=unnamed
 
 
 autocmd FileType c :nnoremap <F5> :!make<CR>
+autocmd FileType cpp :nnoremap <F5> :!make<CR>

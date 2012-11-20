@@ -16,6 +16,7 @@ alias vlcn="vlc -I ncurses"
 alias vlc="vlc --extraintf=http"
 alias vimconfig="vim ~/.vimrc"
 alias zshconfig="vim ~/.zshrc"
+alias xmonadconfig="vim ~/dotfiles/.xmonad/xmonad.hs"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias droprestart="dropbox stop; dropbox start"
 alias chromium_socks="chromium --proxy-server="socks://127.0.0.1:1080" --user-data-dir=~/SOCKS"
@@ -63,7 +64,7 @@ alias transmission="transmission-cli -b -er -u 5"
 alias youtube-mp3="youtube-dl -t --extract-audio --audio-format mp3 --audio-quality 320k"
 alias pathogen="cd ~/.vim/bundle;git clone "
 alias mirror_web="wget -rmk"
-alias music="ncmpcpp -h 192.168.1.100"
+alias music="ncmpcpp -h 192.168.1.101"
 alias TV='cd ~/Videos/TV'
 alias steam='WINEDEBUG=-all wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Steam/Steam.exe >/dev/null 2>&1 &'
 autoload -U promptinit

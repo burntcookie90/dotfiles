@@ -24,6 +24,7 @@ xsetroot -cursor_name left_ptr
 		wicd-client --tray &
 		sh ~/.fehbg &
 		dropbox start &
+		xbacklight -set 50 &
 		exec dbus-launch xmonad
 		#;;
 	#awesome)
