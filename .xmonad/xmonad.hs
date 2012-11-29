@@ -25,6 +25,8 @@ import XMonad.Layout.MultiToggle.Instances
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 
+import XMonad.Actions.CycleWS
+
 -- The preferred terminal program, which is used in a binding below and by
 -- certain contrib modules.
 --
@@ -45,6 +47,7 @@ myBorderWidth   = 1
 -- "windows key" is usually mod4Mask.
 --
 myModMask       = mod1Mask
+
 
 -- Define layout for specific workspaces  
 nobordersLayout = noBorders $ Full 
@@ -212,7 +215,11 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- mod-button3, Set the window to floating mode and resize by dragging
     , ((modm, button3), (\w -> focus w >> mouseResizeWindow w
-                                       >> windows W.shiftMaster))
+                                       >> windows W.shiftMaster)),
+
+	((modm, button4), const (prevWS)),
+
+	((modm, button5), const (nextWS))
 
     -- you may also bind events to the mouse scroll wheel (button4 and button5)
     ]

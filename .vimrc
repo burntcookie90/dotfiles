@@ -12,6 +12,8 @@ set nowrap
 
 ""set tab spacing to 4
 set ts=4
+set tabstop=4
+set shiftwidth=4
 
 
 "" show matching brackets (),{},[]
@@ -19,8 +21,8 @@ set showmatch
 
 ""set number in current split
 set number
-:au WinEnter * :setlocal number
-:au WinLeave * :setlocal nonumber
+":au WinEnter * :setlocal number
+":au WinLeave * :setlocal nonumber
 
 "" set colorschemes to 256 colors
 set t_Co=256
@@ -101,3 +103,5 @@ set clipboard=unnamed
 
 autocmd FileType c :nnoremap <F5> :!make<CR>
 autocmd FileType cpp :nnoremap <F5> :!make<CR>
+
+au FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4

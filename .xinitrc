@@ -20,8 +20,9 @@ xsetroot -cursor_name left_ptr
 		#;;
 	#xmonad)
 		/usr/bin/xscreensaver -no-splash &
-		trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 4 --transparent true --alpha 0 --tint 0x000000 --height 17 &  
-		wicd-client --tray &
+		trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 4 --transparent true --alpha 0 --tint 0x111111 --height 17 &  
+		#wicd-client --tray &
+		nm-applet &
 		sh ~/.fehbg &
 		dropbox start &
 		xbacklight -set 50 &
