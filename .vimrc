@@ -105,3 +105,5 @@ autocmd FileType c :nnoremap <F5> :!make<CR>
 autocmd FileType cpp :nnoremap <F5> :!make<CR>
 
 au FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4
+
+nmap <F9> gg=G''<CR>

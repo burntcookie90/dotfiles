@@ -1,19 +1,21 @@
 Config { font = "xft:Inconsolata :size=10:antialias=true"  
-     , bgColor = "#111111"  
+     , bgColor = "#101112"  
      , fgColor = "#33B5E5"  
      , position = TopW L 96
      , commands = [
 	 		Run Com "~/dmesg.sh" [] "dmesg" 10
 	 		, Run Cpu ["-L","3","-H","50","--normal","green","--high","red"] 10  
 			, Run Network "wlan0" ["-L","0","-H","70","--normal","green","--high","red"] 10   
-			, Run Com "~/battery.sh" [] "battery" 10
+			, Run Com "~/dotfiles/battery.sh" [] "battery" 10
 			, Run Memory ["-t","Mem: <usedratio>%"] 10  
-			, Run Com "~/cputemp.sh" [] "temp" 10  
+			, Run Com "~/dotfiles/cputemp.sh" [] "temp" 10  
 			, Run Date "%a %b %_d %l:%M" "date" 10  
-			, Run Com "~/volume.sh" [] "volume" 10 
+			, Run Com "~/dotfiles/volume.sh" [] "volume" 10 
+			, Run Com "~/dotfiles/capslock.sh" [] "caps" 10
+			, Run Com "~/dotfiles/github.sh" [] "github" 10
 			, Run StdinReader  
            ]  
      , sepChar = "%"  
      , alignSep = "}{"  
-     , template = " %StdinReader%}{ <fc=#33B5E5> dmesg: %dmesg% | Batt:%battery% | %cpu%</fc> <fc=#33B5E5> | %memory% | %temp% C | %wlan0%</fc> | Vol: <fc=green>%volume%</fc> | <fc=#33B5E5>%date%</fc> |"  
+     , template = " %StdinReader%}{ <fc=#33B5E5> Github: %github% | %caps% | Batt:%battery% | %cpu%</fc> <fc=#33B5E5> | %memory% | %temp% C | %wlan0%</fc> | Vol: <fc=green>%volume%</fc> | <fc=#33B5E5>%date%</fc> |"  
      }  
