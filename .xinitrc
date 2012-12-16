@@ -23,14 +23,13 @@ case $1 in
 		google-musicmanager &
 		trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 3 --transparent true --alpha 0 --tint 0x000000 --height 17 &  
 		wicd-client --tray &
+		thunar --daemon &
 		mpd &
 		dropbox start &
 		sh ~/.fehbg &
+		compton -cb &
 		exec dbus-launch xmonad
 		#set the cursor
-		;;
-	awesome)
-		exec dbus-launch awesome
 		;;
 #	*)
 #		exec $DEFAULT_SESSION

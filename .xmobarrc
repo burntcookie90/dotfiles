@@ -1,6 +1,6 @@
 Config { font = "xft:Bitstream Vera Sans Mono:size=9:bold:antialias=true"  
      , bgColor = "#000000"  
-     , fgColor = "grey"  
+     , fgColor = "#33B5E5"  
      , position = TopW L 97
      , commands = [ 
 	 		Run Com "~/mpd.sh" [] "mpd" 10

@@ -30,8 +30,8 @@ set backup              " keep a backup file
 set backupdir=~/.vim/backup,/tmp
 
 ""undo
-set undodir=~/.vim/undodir
 set undofile
+set undodir=~/.vim/undodir
 
 "" plug-in settings
 filetype plugin on
@@ -70,7 +70,7 @@ let g:NERDTreeShowHidden = 1
 
 
 ""statusline
-set statusline=%{fugitive#statusline()}
+"set statusline=%{fugitive#statusline()}
 set nocompatible   " Disable vi-compatibility
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs   "

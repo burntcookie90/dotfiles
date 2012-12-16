@@ -8,6 +8,8 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="afowler"
 
 # Example aliases
+alias tmux='tmux -2'
+alias gitio='curl -i http://git.io -F'
 alias vaio='ssh -p 24 192.168.1.102'
 alias rpi='ssh -p 23 192.168.1.100 -t tmux'
 alias pathogen_add="git submodule add "
