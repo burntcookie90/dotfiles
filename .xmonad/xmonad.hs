@@ -22,6 +22,12 @@ import XMonad.Layout.Tabbed
 import XMonad.Layout.MultiToggle
 import XMonad.Layout.MultiToggle.Instances
 
+import XMonad.Prompt
+import XMonad.Prompt.Shell
+import XMonad.Prompt.Window
+import XMonad.Prompt.XMonad
+import XMonad.Prompt.AppendFile
+
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 
@@ -156,6 +162,15 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
 	--toggle touchpad
 	, ((0 			, 0x1008ff2d), spawn "synclient TouchpadOff=$(synclient -l | grep -c 'TouchpadOff.*=.*0')")
+	
+	--go to window
+	, ((modm .|. shiftMask, xK_p 	), windowPromptGoto defaultXPConfig {autoComplete = Just 50000} )
+	
+	--append to notes
+	, ((modm .|. shiftMask, xK_n), do 
+			spawn ("date>>"++"/home/vishnu/NOTES") 
+			appendFilePrompt defaultXPConfig "/home/vishnu/NOTES"
+		)
 
 	{---toggle left rotate-}
 	{-, ((modm .|. shiftMask, xK_h), spawn "xrandr -o left")-}
