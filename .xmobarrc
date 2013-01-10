@@ -1,4 +1,4 @@
-Config { font = "xft:Bitstream Vera Sans Mono:size=9:bold:antialias=true"  
+Config { font = "xft:Inconsolata Medium:size=9:antialias=true"  
 				, bgColor = "#000000"  
 				, fgColor = "#33B5E5"  
 				, position = TopW L 97
@@ -13,5 +13,5 @@ Config { font = "xft:Bitstream Vera Sans Mono:size=9:bold:antialias=true"
 				]  
 				, sepChar = "%"  
 				, alignSep = "}{"  
-				, template = " %StdinReader%}{ <fc=grey>| %mpd% |  %multicpu%</fc> <fc=grey> | %memory% | %eth0%</fc> | Vol: <fc=green>%volume%</fc> | <fc=#ee9a00>%date%</fc> |"  
+				, template = "<fc=#33B5E5> %StdinReader%</fc>}{ <fc=#33B5E5>| %mpd% |  %multicpu%</fc> <fc=#33B5E5> | %memory% | %eth0%</fc> | Vol: <fc=green>%volume%</fc> | <fc=#ee9a00>%date%</fc> |"  
 }  
