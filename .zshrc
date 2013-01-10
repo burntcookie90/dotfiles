@@ -63,7 +63,7 @@ alias youtube-mp3="youtube-dl -t --extract-audio --audio-format mp3 --audio-qual
 alias mirror_web="wget -rmk"
 alias music="ncmpcpp"
 alias TV='cd ~/Videos/TV'
-alias steam='WINEDEBUG=-all wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Steam/Steam.exe >/dev/null 2>&1 &'
+alias backup='sudo mount /dev/sdc1 /mnt/samsung;sh /home/vishnu/dotfiles/backup.sh /mnt/samsung;sudo umount /mnt/samsung'
 #
 autoload -U promptinit
 promptinit
@@ -96,7 +96,7 @@ plugins=(git archlinux github)
 
 source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/android-sdk/platform-tools:/opt/android-sdk/tools:/opt/java/bin:/opt/java/db/bin:/opt/java/jre/bin:/usr/bin/vendor_perl:/usr/bin/core_perl:/opt/android-sdk/platform-tools/:/home/vishnu/bin/:/opt/android-sdk/tools/:/usr/share/eclipse:/opt/android-sdk/platform-tools/:/home/vishnu/bin/:/opt/android-sdk/tools/:/usr/share/eclipse
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/android-sdk/platform-tools:/opt/android-sdk/tools:/opt/java6/bin:/opt/java6/db/bin:/opt/java6/jre/bin:/usr/bin/vendor_perl:/usr/bin/core_perl:/opt/android-sdk/platform-tools/:/home/vishnu/bin/:/opt/android-sdk/tools/:/usr/share/eclipse:/opt/android-sdk/platform-tools/:/home/vishnu/bin/:/opt/android-sdk/tools/:/usr/share/eclipse
 
 autoload -U compinit
 compinit

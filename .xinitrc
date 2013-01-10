@@ -21,7 +21,7 @@ case $1 in
 		/usr/bin/xscreensaver -no-splash &
 		synergys -c ~/synergy.conf &
 		google-musicmanager &
-		trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 6 --transparent true --alpha 0 --tint 0x000000 --height 17 --monitor primary &
+		trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 3 --transparent true --alpha 0 --tint 0x000000 --height 17 --monitor primary &
 		wicd-client --tray &
 		thunar --daemon &
 		mpd &

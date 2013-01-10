@@ -1,17 +1,17 @@
 Config { font = "xft:Bitstream Vera Sans Mono:size=9:bold:antialias=true"  
-     , bgColor = "#000000"  
-     , fgColor = "#33B5E5"  
-     , position = TopW L 97
-     , commands = [ 
-	 		Run Com "~/mpd.sh" [] "mpd" 10
-	 		,Run MultiCpu ["-L","3","-H","50","--normal","green","--high","red"] 10  
-             , Run Network "eth0" ["-L","0","-H","70","--normal","green","--high","red"] 10   
-             , Run Memory ["-t","Mem: <usedratio>%"] 10  
-           , Run Date "%a %b %_d %l:%M" "date" 10  
-             , Run Com "~/volume.sh" [] "volume" 10  
-           , Run StdinReader  
-           ]  
-     , sepChar = "%"  
-     , alignSep = "}{"  
-     , template = " %StdinReader%}{ <fc=grey>| %mpd% |  %multicpu%</fc> <fc=grey> | %memory% | %eth0%</fc> | Vol: <fc=green>%volume%</fc> | <fc=#ee9a00>%date%</fc> |"  
-     }  
+				, bgColor = "#000000"  
+				, fgColor = "#33B5E5"  
+				, position = TopW L 97
+				, commands = [ 
+						Run Com "~/dotfiles/mpd.sh" [] "mpd" 10
+						,Run MultiCpu ["-L","3","-H","50","--normal","green","--high","red"] 10  
+						, Run Network "eth0" ["-L","0","-H","70","--normal","green","--high","red"] 10   
+						, Run Memory ["-t","Mem: <usedratio>%"] 10  
+						, Run Date "%a %b %_d %l:%M" "date" 10  
+						, Run Com "~/volume.sh" [] "volume" 10  
+						, Run StdinReader  
+				]  
+				, sepChar = "%"  
+				, alignSep = "}{"  
+				, template = " %StdinReader%}{ <fc=grey>| %mpd% |  %multicpu%</fc> <fc=grey> | %memory% | %eth0%</fc> | Vol: <fc=green>%volume%</fc> | <fc=#ee9a00>%date%</fc> |"  
+}  
