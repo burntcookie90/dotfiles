@@ -37,7 +37,7 @@ import XMonad.Actions.CycleWS
 -- certain contrib modules.
 --
 {-myTerminal      = "terminator -p mydefaults"-}
-myTerminal = "terminal"
+myTerminal = "xfce4-terminal"
 
 -- Whether focus follows the mouse pointer.
 myFocusFollowsMouse :: Bool
@@ -262,7 +262,7 @@ defaultLayout = tiled ||| Mirror tiled ||| Full ||| simpleTabbed
      ratio   = 1/2
 
      -- Percent of screen to increment by when resizing panes
-     delta   = 3/100
+     delta   = 1/100
 
 ------------------------------------------------------------------------
 -- Window rules:
