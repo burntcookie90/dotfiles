@@ -10,7 +10,7 @@ ZSH_THEME="afowler"
 # Example aliases
 alias tmux='tmux -2'
 alias gitio='curl -i http://git.io -F'
-alias vaio='ssh -p 24 192.168.1.102'
+alias vaio='ssh -p 24 192.168.1.104'
 alias rpi='ssh -p 23 192.168.1.100 -t tmux'
 alias pathogen_add="git submodule add "
 alias pathogen_upgrade="git submodule foreach git pull origin master"
@@ -64,6 +64,7 @@ alias mirror_web="wget -rmk"
 alias music="ncmpcpp"
 alias TV='cd ~/Videos/TV'
 alias backup='sudo mount /dev/sdc1 /mnt/samsung;sh /home/vishnu/dotfiles/backup.sh /mnt/samsung;sudo umount /mnt/samsung'
+#alias record_window="recordmydesktop --windowid $(xwininfo | awk '/Window id:/ {print $4}')"
 #
 autoload -U promptinit
 promptinit

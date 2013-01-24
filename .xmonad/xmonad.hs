@@ -27,7 +27,7 @@ import qualified Data.Map        as M
 -- certain contrib modules.
 --
 {-myTerminal      = "terminator -p mydefaults"-}
-myTerminal = "terminal"
+myTerminal = "xfce4-terminal"
 
 -- Whether focus follows the mouse pointer.
 myFocusFollowsMouse :: Bool
