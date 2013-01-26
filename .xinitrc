@@ -18,16 +18,16 @@ case $1 in
 		exec dbus-launch  startxfce4
 		;;
 	xmonad)
-		/usr/bin/xscreensaver -no-splash &
-		trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 4 --transparent true --alpha 0 --tint 0x101112 --height 17 &  
-		#wicd-client --tray &
-		thunar --daemon &
-		nm-applet &
-		sh ~/.fehbg &
-		dropbox start &
-		xbacklight -set 50 &
-		compton -cb
-		exec dbus-launch xmonad
+		#/usr/bin/xscreensaver -no-splash &
+		#trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 4 --transparent true --alpha 0 --tint 0x101112 --height 17 &  
+		##wicd-client --tray &
+		#thunar --daemon &
+		#nm-applet &
+		#sh ~/.fehbg &
+		#dropbox start &
+		#xbacklight -set 50 &
+		#compton -cb
+		exec dbus-launch ck-launch-session xmonad
 		;;
 	#i3)
 		#exec i3
