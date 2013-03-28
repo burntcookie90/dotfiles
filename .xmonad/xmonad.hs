@@ -153,6 +153,12 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 	{-[>--raise volume]-}
 	,((0              , 0x1008ff13), spawn "amixer set Master 2%+")
 
+	-- decrease brightness
+	,((0 			, 0x1008ff03), spawn "xbacklight -dec 10")
+	
+	--inc brightnss
+	,((0 			, 0x1008ff02), spawn "xbacklight -inc 10")
+
 	--take screenshot
 	, ((0              , 0xff61), spawn "import -window root ~/Dropbox/Public/`date '+%Y%m%d-%H%M%S'`.png")
 
@@ -168,8 +174,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 	
 	--append to notes
 	, ((modm .|. shiftMask, xK_n), do 
-			spawn ("date>>"++"/home/vishnu/NOTES") 
-			appendFilePrompt defaultXPConfig "/home/vishnu/NOTES"
+			spawn ("date>>"++"/home/vishnu/Dropbox/NOTES") 
+			appendFilePrompt defaultXPConfig "/home/vishnu/Dropbox/NOTES"
 		)
 
 	{---toggle left rotate-}

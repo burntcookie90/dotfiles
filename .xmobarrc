@@ -12,10 +12,9 @@ Config { font = "xft:Inconsolata :size=10:antialias=true"
 			, Run Date "%a %b %_d %l:%M" "date" 10  
 			, Run Com "~/dotfiles/volume.sh" [] "volume" 10 
 			, Run Com "~/dotfiles/capslock.sh" [] "caps" 10
-			, Run Com "~/dotfiles/github.sh" [] "github" 10
 			, Run StdinReader  
            ]  
      , sepChar = "%"  
      , alignSep = "}{"  
-     , template = " %StdinReader%}{ <fc=#33B5E5> Github: %github% | %caps% | Batt:%battery% | %cpu%</fc> <fc=#33B5E5> | %memory% | %temp% C | %wlan0%</fc> | Vol: <fc=green>%volume%</fc> | <fc=#33B5E5>%date%</fc> |"  
+     , template = " %StdinReader%}{ <fc=#33B5E5> %caps% | Batt:%battery% | %cpu%</fc> <fc=#33B5E5> | %memory% | %temp% C | %wlan0%</fc> | Vol: <fc=green>%volume%</fc> | <fc=#33B5E5>%date%</fc> |"  
      }  
