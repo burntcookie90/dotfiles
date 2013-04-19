@@ -14,6 +14,7 @@ import System.Exit
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.EwmhDesktops
+import XMonad.Hooks.SetWMName
 
 import XMonad.Layout.NoBorders
 import XMonad.Layout.PerWorkspace
@@ -21,6 +22,7 @@ import XMonad.Layout.Spiral
 import XMonad.Layout.Tabbed
 import XMonad.Layout.MultiToggle
 import XMonad.Layout.MultiToggle.Instances
+import XMonad.Layout.Grid
 
 import XMonad.Prompt
 import XMonad.Prompt.Shell
@@ -90,7 +92,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
 
     -- launch dmenu
-    , ((modm,               xK_p     ), spawn "dmenu_run")
+    , ((modm,               xK_p     ), spawn "dmenu_run.pl")
 
     -- launch gmrun
     {-, ((modm .|. shiftMask, xK_p     ), spawn "gmrun")-}
@@ -168,6 +170,15 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
 	--toggle touchpad
 	, ((0 			, 0x1008ff2d), spawn "synclient TouchpadOff=$(synclient -l | grep -c 'TouchpadOff.*=.*0')")
+
+	-- nuvola previous
+	, ((0 			, 0x1008ff16), spawn "nuvolaplayer-client prev")
+
+	-- nuvola toggle 
+	, ((0 			, 0x1008ff14), spawn "nuvolaplayer-client toggle")
+
+	-- nuvola next
+	, ((0 			, 0x1008ff17), spawn "nuvolaplayer-client next")
 	
 	--go to window
 	, ((modm .|. shiftMask, xK_p 	), windowPromptGoto defaultXPConfig {autoComplete = Just 50000} )
@@ -256,7 +267,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 -- The available layouts.  Note that each layout is separated by |||,
 -- which denotes layout choice.
 --
-defaultLayout = tiled ||| Mirror tiled ||| Full ||| simpleTabbed
+defaultLayout = tiled ||| GridRatio (4/3) ||| Mirror tiled ||| Full
   where
      -- default tiling algorithm partitions the screen into two panes
      tiled   = Tall nmaster delta ratio
@@ -293,6 +304,7 @@ myManageHook = composeAll
     , resource  =? "desktop_window" --> doIgnore
     , resource  =? "kdesktop"       --> doIgnore 
 	, className =? "Vlc" 			--> doShift "9:media"
+	, className =? "nuvolaplayer"   --> doShift "9:media"
 	, className =? "Skype" 			--> doFloat
 	, className =? "Transmission-gtk" --> doShift "8"
 	, className =? "Eclipse" 		--> doShift "4"
@@ -327,7 +339,7 @@ myLogHook = return ()
 -- per-workspace layout choices.
 --
 -- By default, do nothing.
-myStartupHook = return ()
+myStartupHook = setWMName "LG3D"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.

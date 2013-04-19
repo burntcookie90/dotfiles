@@ -36,27 +36,13 @@ alias Senior_Design='cd /home/vishnu/Dropbox/GT\ Documents/2012-2013/Fall2012/Se
 alias vaio='ssh -p 24 index.vishnurajeevan.com'
 alias rpi='ssh -p 23 index.vishnurajeevan.com'
 alias desktop='ssh index.vishnurajeevan.com'
-alias fall12='cd ~/Dropbox/GT\ Documents/2012-2013/Fall2012/'
 alias gmail='google-chrome --app=http://mail.google.com'
-alias nautilus='nautilus .'
-alias Install='sudo pacman -S'
-alias Remove='sudo pacman -R'
-alias Upgrade='sudo pacman -Syyu'
-alias Update='sudo pacman -S'
-alias Search='pacman -Ss'
-alias Autoremove='sudo apt-get autoremove'
-alias Purge='sudo apt-get purge'
 alias cp='cp -v'
 alias rm='rm -v'
 alias mv='mv -v'
 alias ls='ls -F --color=always'
 alias Research='cd ~/Dropbox/GT\ Documents/2011-2012/Spring\ 2012/Research'
-alias AUR='sudo pacman -U'
 alias rtfn='elinks https://www.archlinux.org/feeds/news/'
-alias gadd="git add"
-alias gcommit="git commit"
-alias gpush="git push -u origin master"
-alias gpull="git pull origin master"
 alias wifi="wicd-curses"
 alias grep='grep --color=auto'
 alias eclim_2200="eclimd -f ~/.eclimrc1"
@@ -68,9 +54,6 @@ alias transmission="transmission-cli -b -er -u 5"
 alias youtube-mp3="youtube-dl -t --extract-audio --audio-format mp3 --audio-quality 320k"
 alias pathogen="cd ~/.vim/bundle;git clone "
 alias mirror_web="wget -rmk"
-alias music="ncmpcpp -h 192.168.1.101"
-alias TV='cd ~/Videos/TV'
-alias steam='WINEDEBUG=-all wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Steam/Steam.exe >/dev/null 2>&1 &'
 autoload -U promptinit
 promptinit
 
@@ -111,6 +94,8 @@ setopt completealiases
 
 #exports
 export PATH=$PATH:/home/vishnu/wfdb/bin
+export DE=xmonad
+export BROWSER=chromium
 export LD_LIBRARY_PATH=/home/vishnu/wfdb/lib:/home/vishnu/wfdb/lib64
 #export PATH=$PATH:/opt/android-sdk/platform-tools/
 #export PATH=$PATH:/home/vishnu/bin/

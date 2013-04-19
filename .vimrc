@@ -24,6 +24,10 @@ set number
 ":au WinEnter * :setlocal number
 ":au WinLeave * :setlocal nonumber
 
+"more natural split behaviour
+set splitbelow
+set splitright
+
 "" set colorschemes to 256 colors
 set t_Co=256
 
