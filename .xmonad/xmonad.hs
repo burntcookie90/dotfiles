@@ -23,6 +23,10 @@ import XMonad.Layout.Tabbed
 import XMonad.Layout.MultiToggle
 import XMonad.Layout.MultiToggle.Instances
 import XMonad.Layout.Grid
+import XMonad.Layout.IM
+import XMonad.Layout.Reflect
+import XMonad.Layout.ShowWName
+import Data.Ratio((%))
 
 import XMonad.Prompt
 import XMonad.Prompt.Shell
@@ -60,6 +64,19 @@ myModMask       = mod1Mask
 -- Define layout for specific workspaces  
 nobordersLayout = noBorders $ Full 
 
+imLayout = withIM pidginRatio pidginRoster $
+               reflectHoriz $
+               withIM skypeRatio skypeRoster
+               (Grid ||| Full ||| simpleTabbed)
+               where
+                   pidginRatio = (1%7)
+                   skypeRatio = (1%6)
+                   pidginRoster = And (ClassName "Pidgin") (Role "buddy_list")
+                   --This doesn't quite work with the latest version of Skype,
+                   --so a new conversation/call may snap to the right and push
+                   --the buddy list into the center tiled area
+                   skypeRoster = (ClassName "Skype") `And` (Not (Title "Options")) `And` (Not (Role "ConversationsWindow")) `And` (Not (Role "CallWindow"))
+
 nobordersOrStrutsLayout = avoidStruts ( nobordersLayout )
 
 
@@ -73,9 +90,9 @@ nobordersOrStrutsLayout = avoidStruts ( nobordersLayout )
 -- > workspaces = ["web", "irc", "code" ] ++ map show [4..9]
 --
 -- Put all layouts together  
-myLayout = onWorkspace "9:media" nobordersOrStrutsLayout $ defaultLayout
+myLayout = onWorkspace "8:chat" imLayout $ onWorkspace "9:media" nobordersOrStrutsLayout $ defaultLayout
 
-myWorkspaces    = ["1","2","3","4","5","6","7","8","9:media"]
+myWorkspaces    = ["1","2","3","4","5","6","7","8:chat","9:media"]
 
 -- Border colors for unfocused and focused windows, respectively.
 --
@@ -304,10 +321,13 @@ myManageHook = composeAll
     , resource  =? "desktop_window" --> doIgnore
     , resource  =? "kdesktop"       --> doIgnore 
 	, className =? "Vlc" 			--> doShift "9:media"
+	, className =? "Spotify"		--> doShift "9:media"
 	, className =? "nuvolaplayer"   --> doShift "9:media"
 	, className =? "Skype" 			--> doFloat
+	, className =? "Pidgin" 		--> doShift "8:chat"
 	, className =? "Transmission-gtk" --> doShift "8"
 	, className =? "Eclipse" 		--> doShift "4"
+	, className =? "jetbrains-android-studio"	--> doShift "4"
 	{-, className =? "GMusic_Front" 	--> doFloat-}
 	, title 	=? "NixNote" 		--> doShift "7"
 	]

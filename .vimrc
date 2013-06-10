@@ -45,6 +45,7 @@ filetype plugin on
 filetype indent on
 autocmd Filetype tex,latex :set grepprg=grep\ -nH\ $*
 autocmd Filetype tex,latex :set dictionary=~/.vim/dict/latex.dict
+autocmd Filetype tex,latex :nnoremap \la :!pdflatex % <CR>
 
 ""coloscheme junk
 ""set background=dark
@@ -107,9 +108,14 @@ set clipboard=unnamed
 
 autocmd FileType c :nnoremap <F5> :!make<CR>
 autocmd FileType cpp :nnoremap <F5> :!make<CR>
+autocmd FileType markdown :nnoremap <F5> :%!markdown<CR>
 
 au FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
 nmap <F9> gg=G''<CR>
 
 nmap <F10> :SSave<CR>
+
+" automatically save and load folds
+au BufWinLeave * silent! mkview
+au BufWinEnter * silent! loadview

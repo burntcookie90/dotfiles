@@ -8,6 +8,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="my-afowler"
 
 # Example aliases
+say() { if [[ "${1}" =~ -[a-z]{2} ]]; then local lang=${1#-}; local text="${*#$1}"; else local lang=${LANG%_*    }; local text="$*";fi; mplayer "http://translate.google.com/translate_tts?ie=UTF-8&tl=${lang}&q=${text}" &> /    dev/null ; } 
 alias tmux="tmux -2"
 alias factor_ssh="ssh factor-3210.cc.gatech.edu -l vrajeevan3"
 alias pathogen_add="git submodule add "
@@ -85,7 +86,7 @@ plugins=(git archlinux github)
 
 source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/android-sdk/platform-tools:/opt/android-sdk/tools:/opt/java/bin:/opt/java/db/bin:/opt/java/jre/bin:/usr/bin/vendor_perl:/usr/bin/core_perl:/opt/android-sdk/platform-tools/:/home/vishnu/bin/:/opt/android-sdk/tools/:/usr/share/eclipse:/opt/android-sdk/platform-tools/:/home/vishnu/bin/:/opt/android-sdk/tools/:/usr/share/eclipse
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/android-sdk/platform-tools:/opt/android-sdk/tools:/opt/java/bin:/opt/java/db/bin:/opt/java/jre/bin:/usr/bin/vendor_perl:/usr/bin/core_perl:/opt/android-sdk/platform-tools/:/home/vishnu/bin/:/opt/android-sdk/tools/:/usr/share/eclipse:/opt/android-sdk/platform-tools/:/home/vishnu/bin/:/opt/android-sdk/tools/:/usr/share/eclipse:/home/vishnu/.gem/ruby/2.0.0/bin:/home/vishnu/android/android-studio/sdk/platform-tools:/home/vishnu/android/android-studio/sdk/tools
 
 autoload -U compinit
 compinit
@@ -93,7 +94,6 @@ setopt completealiases
 
 
 #exports
-export PATH=$PATH:/home/vishnu/wfdb/bin
 export DE=xmonad
 export BROWSER=chromium
 export LD_LIBRARY_PATH=/home/vishnu/wfdb/lib:/home/vishnu/wfdb/lib64
