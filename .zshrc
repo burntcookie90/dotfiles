@@ -7,7 +7,7 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="afowler"
 
-# Example aliases
+#aliases
 say() { if [[ "${1}" =~ -[a-z]{2} ]]; then local lang=${1#-}; local text="${*#$1}"; else local lang=${LANG%_*    }; local text="$*";fi; mplayer "http://translate.google.com/translate_tts?ie=UTF-8&tl=${lang}&q=${text}" &> /    dev/null ; } 
 alias tmux="tmux -2"
 alias pathogen_add="git submodule add "
@@ -69,9 +69,7 @@ setopt completealiases
 
 
 #exports
-export DE=xmonad
 export BROWSER=chromium
-export LD_LIBRARY_PATH=/home/vishnu/wfdb/lib:/home/vishnu/wfdb/lib64
 #export PATH=$PATH:/opt/android-sdk/platform-tools/
 #export PATH=$PATH:/home/vishnu/bin/
 export EDITOR=vim
@@ -84,7 +82,7 @@ bindkey '^R' history-incremental-search-backward
 bindkey "^[[B" history-beginning-search-forward
 bindkey "^[[A" history-beginning-search-backward
 
-screenfetch-dev
+#screenfetch-dev
 
 ## Command history configuration
 HISTFILE=$HOME/.zsh_history
