@@ -1,6 +1,7 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
-
+ 
+fpath=(/usr/local/share/zsh-completions $fpath)
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -8,7 +9,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="afowler"
 
 #aliases
-say() { if [[ "${1}" =~ -[a-z]{2} ]]; then local lang=${1#-}; local text="${*#$1}"; else local lang=${LANG%_*    }; local text="$*";fi; mplayer "http://translate.google.com/translate_tts?ie=UTF-8&tl=${lang}&q=${text}" &> /    dev/null ; } 
+say() { if [[ "${1}" =~ -[a-z]{2} ]]; then local lang=${1#-}; local text="${*#$1}"; else local lang=${LANG%_*    }; local text="$*";fi; mplayer "http://translate.google.com/translate_tts?ie=UTF-8&tl=${lang}&q=${text}" &> /dev/null ; } 
 alias tmux="tmux -2"
 alias pathogen_add="git submodule add "
 alias pathogen_upgrade="git submodule foreach git pull origin master"
@@ -24,12 +25,15 @@ alias ls='ls -F --color=always'
 alias grep='grep --color=auto'
 alias pathogen="cd ~/.vim/bundle;git clone "
 alias mirror_web="wget -rmk"
+
+#Scottrade Aliases
 alias sctclonedev="git tf clone http://fttmfndation001.scottrade.com:8080/tfs $/MobileApp/iOS/Branches/Development"
 alias sctclonerc="git tf clone http://fttmfndation001.scottrade.com:8080/tfs $/MobileApp/iOS/Branches/ReleaseCandidate"
 alias sctcloneandroiddev="git tf clone http://fttmfndation001.scottrade.com:8080/tfs $/MobileApp/Android/Branches/Development"
 alias sctcloneandroidrc="git tf clone http://fttmfndation001.scottrade.com:8080/tfs $/MobileApp/Android/Branches/ReleaseCandidate"
 alias sctpull="git tf pull --rebase"
-alias sctpush="git tf checkin --no-metadata --deep"
+alias sctpush="git tf checkin --no-metadata --deep --no-lock"
+
 autoload -U promptinit
 promptinit
 
