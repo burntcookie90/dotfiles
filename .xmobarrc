@@ -13,11 +13,9 @@ Config { font = "xft:Inconsolata :size=10:antialias=true"
 			, Run Date "%a %b %_d %l:%M" "date" 10  
 			, Run Com "~/dotfiles/volume.sh" [] "volume" 10 
 			, Run Com "~/dotfiles/capslock.sh" [] "caps" 10
-			, Run Com "~/dotfiles/gmail.bash" [] "gmail" 9000
-			, Run Com "~/dotfiles/gmail-vishnu.bash" [] "gmail-v" 9000
 			, Run StdinReader  
            ]  
      , sepChar = "%"  
      , alignSep = "}{"  
-     , template = " %StdinReader%}{ <fc=#33B5E5> %caps% | Batt: %battery% | %cpu%</fc> <fc=#33B5E5> | %memory% | Temp: %temp% C | %wlan0% | Vol: %volume% | lordvishnu527: %gmail% | vishnurajeevan %gmail-v% </fc> | <fc=#33B5E5>%date%</fc> |"  
+     , template = " %StdinReader%}{ <fc=#33B5E5> %caps% | Batt: %battery% | %cpu%</fc> <fc=#33B5E5> | %memory% | Temp: %temp% C | %wlan0% | Vol: %volume%  </fc> | <fc=#33B5E5>%date%</fc> |"  
      }  

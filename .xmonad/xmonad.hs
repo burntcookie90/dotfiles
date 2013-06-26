@@ -198,7 +198,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 	, ((0 			, 0x1008ff17), spawn "nuvolaplayer-client next")
 	
 	--go to window
-	, ((modm .|. shiftMask, xK_p 	), windowPromptGoto defaultXPConfig {autoComplete = Just 50000} )
+	, ((modm .|. shiftMask, xK_f 	), windowPromptGoto defaultXPConfig {autoComplete = Just 50000} )
 	
 	--append to notes
 	, ((modm .|. shiftMask, xK_n), do 
