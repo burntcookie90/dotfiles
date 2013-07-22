@@ -13,3 +13,4 @@ ln -sfi $HOME/dotfiles/.xmonad/xmonad.hs $HOME/.xmonad/xmonad.hs
 ln -sfi $HOME/dotfiles/.Xresources $HOME/
 ln -sfi $HOME/dotfiles/oh-my-zsh $HOME/.oh-my-zsh
 ln -sfi $HOME/dotfiles/nm.sh $HOME/
+ln -sfi $HOME/dotfiles/vim $HOME/.vim
