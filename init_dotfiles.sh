@@ -1,3 +1,5 @@
+git submodule init
+git submodule update
 ln -sfi $HOME/dotfiles/cputemp.sh $HOME/ 
 ln -sfi $HOME/dotfiles/battery.sh $HOME/ 
 ln -sfi $HOME/dotfiles/date.sh  $HOME/
