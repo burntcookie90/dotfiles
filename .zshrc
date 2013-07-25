@@ -27,15 +27,18 @@ alias pathogen="cd ~/.vim/bundle;git clone "
 alias mirror_web="wget -rmk"
 
 #Scottrade Aliases
-alias sctclonedev="git tf clone http://fttmfndation001.scottrade.com:8080/tfs $/MobileApp/iOS/Branches/Development"
-alias sctclonerc="git tf clone http://fttmfndation001.scottrade.com:8080/tfs $/MobileApp/iOS/Branches/ReleaseCandidate"
-alias sctcloneandroiddev="git tf clone http://fttmfndation001.scottrade.com:8080/tfs $/MobileApp/Android/Branches/Development"
-alias sctcloneandroidrc="git tf clone http://fttmfndation001.scottrade.com:8080/tfs $/MobileApp/Android/Branches/ReleaseCandidate"
-alias sctpull="git tf pull --rebase"
+alias sctclonedev="git tf clone --deep  http://fttmfndation001.scottrade.com:8080/tfs $/MobileApp/iOS/Branches/Development"
+alias sctclonerc="git tf clone --deep http://fttmfndation001.scottrade.com:8080/tfs $/MobileApp/iOS/Branches/ReleaseCandidate"
+alias sctcloneandroiddev="git tf clone --deep  http://fttmfndation001.scottrade.com:8080/tfs $/MobileApp/Android/Branches/Development"
+alias sctcloneandroidrc="git tf clone --deep http://fttmfndation001.scottrade.com:8080/tfs $/MobileApp/Android/Branches/ReleaseCandidate"
+alias sctpull="git tf pull --rebase --deep"
 alias sctpush="git tf checkin --no-metadata --deep --no-lock"
+alias :q="exit"
+alias :w="yer not in vim n00b"
 
 autoload -U promptinit
 promptinit
+
 
 #prompt suse
 
@@ -65,7 +68,7 @@ plugins=(git adb brew osx github)
 
 source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$HOME/Android/sdk/platform-tools:$HOME/Android/sdk/tools:$HOME/Downloads/screenfetch:/usr/local/share/npm/bin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$HOME/Android/sdk/platform-tools:$HOME/Android/sdk/tools:$HOME/Downloads/screenfetch:/usr/local/share/npm/bin:$HOME/bin:$HOME/.cabal/bin
 
 autoload -U compinit
 compinit
