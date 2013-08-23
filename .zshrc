@@ -82,7 +82,7 @@ export BROWSER=chromium
 export EDITOR=vim
 #export PATH=$PATH:/opt/android-sdk/tools/
 export USE_CCACHE=1
-export ECLIPSE_HOME=/usr/share/eclipse
+export ANDROID_HOME=/Users/vrajeevan/Android/sdk/
 #export PATH=$PATH:$ECLIPSE_HOME
 bindkey -e
 bindkey '^R' history-incremental-search-backward
@@ -104,3 +104,6 @@ setopt hist_ignore_space
 setopt hist_verify
 setopt inc_append_history
 setopt share_history # share command history data
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
