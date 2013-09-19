@@ -37,7 +37,6 @@ import XMonad.Prompt.AppendFile
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 
-import XMonad.Actions.CycleWS
 
 -- The preferred terminal program, which is used in a binding below and by
 -- certain contrib modules.
@@ -58,7 +57,7 @@ myBorderWidth   = 1
 -- ("right alt"), which does not conflict with emacs keybindings. The
 -- "windows key" is usually mod4Mask.
 --
-myModMask       = mod1Mask
+myModMask       = mod4Mask
 
 
 -- Define layout for specific workspaces  
@@ -264,11 +263,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- mod-button3, Set the window to floating mode and resize by dragging
     , ((modm, button3), (\w -> focus w >> mouseResizeWindow w
-                                       >> windows W.shiftMaster)),
-
-	((modm, button4), const (prevWS)),
-
-	((modm, button5), const (nextWS))
+                                       >> windows W.shiftMaster))
 
     -- you may also bind events to the mouse scroll wheel (button4 and button5)
     ]
@@ -366,7 +361,7 @@ myStartupHook = setWMName "LG3D"
 
 -- Run xmonad with the settings you specify. No need to modify this.
 --
-main = xmonad=<<xmobar defaults
+main = osxmonad defaults
 
 -- A structure containing your configuration settings, overriding
 -- fields in the default config. Any you don't override, will

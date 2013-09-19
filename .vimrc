@@ -14,6 +14,7 @@ set nowrap
 set ts=4
 set tabstop=4
 set shiftwidth=4
+set expandtab
 
 
 "" show matching brackets (),{},[]
@@ -21,8 +22,8 @@ set showmatch
 
 ""set number in current split
 set number
-":au WinEnter * :setlocal number
-":au WinLeave * :setlocal nonumber
+:au WinEnter * :setlocal number
+:au WinLeave * :setlocal nonumber
 
 "more natural split behaviour
 set splitbelow
@@ -32,8 +33,8 @@ set splitright
 set t_Co=256
 
 ""backup
-set backup              " keep a backup file
 set backupdir=~/.vim/backup,/tmp
+set backup              " keep a backup file
 
 ""undo
 set undodir=~/.vim/undodir
@@ -57,8 +58,9 @@ colorscheme jellybeans
 ""colorscheme cleanroom
 ""
 
-""pastmode toggle
+""pastemode toggle
 nmap <F4> :set paste!<CR>
+"
 ""tagbar toggler
 nmap <F8> :TagbarToggle<CR>
 

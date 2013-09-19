@@ -69,6 +69,7 @@ plugins=(git adb brew osx github)
 source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$HOME/Android/sdk/platform-tools:$HOME/Android/sdk/tools:$HOME/Downloads/screenfetch:/usr/local/share/npm/bin:$HOME/bin:$HOME/.cabal/bin
+export PATH=$PATH:/usr/local/Cellar/ruby/2.0.0-p195/bin
 
 autoload -U compinit
 compinit
