@@ -92,7 +92,7 @@ nobordersOrStrutsLayout = avoidStruts ( nobordersLayout )
 -- Put all layouts together  
 myLayout = onWorkspace "8:chat" imLayout $ onWorkspace "9:media" nobordersOrStrutsLayout $ defaultLayout
 
-myWorkspaces    = ["1","2","3","4","5","6","7","8:chat","9:media"]
+myWorkspaces    = ["1:dev","2:devweb","3:vcs","4:web","5","6","7","8:chat","9:media"]
 
 -- Border colors for unfocused and focused windows, respectively.
 --
@@ -325,9 +325,11 @@ myManageHook = composeAll
 	, className =? "nuvolaplayer"   --> doShift "9:media"
 	, className =? "Skype" 			--> doFloat
 	, className =? "Pidgin" 		--> doShift "8:chat"
-	, className =? "Transmission-gtk" --> doShift "8"
-	, className =? "Eclipse" 		--> doShift "4"
-	, className =? "jetbrains-android-studio"	--> doShift "4"
+	, className =? "Transmission-gtk" --> doShift "8:chat"
+	, className =? "jetbrains-idea-ce" --> doShift "1:dev"
+	, className =? "SmartGit/Hg" --> doShift "3:vcs"
+	, className =? "Eclipse" 		--> doShift "1:dev"
+	, className =? "jetbrains-android-studio"	--> doShift "1:dev"
 	{-, className =? "GMusic_Front" 	--> doFloat-}
 	, title 	=? "NixNote" 		--> doShift "7"
 	]

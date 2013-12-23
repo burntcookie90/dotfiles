@@ -103,6 +103,7 @@ export EDITOR=vim
 #export PATH=$PATH:/opt/android-sdk/tools/
 export USE_CCACHE=1
 export ECLIPSE_HOME=/usr/share/eclipse
+export ANDROID_HOME=/home/vishnu/android/android-studio/sdk/
 #export PATH=$PATH:$ECLIPSE_HOME
 bindkey -e
 bindkey '^R' history-incremental-search-backward
