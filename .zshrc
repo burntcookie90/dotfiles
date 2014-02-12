@@ -57,7 +57,7 @@ alias youtube-mp3="youtube-dl -t --extract-audio --audio-format mp3 --audio-qual
 alias pathogen="cd ~/.vim/bundle;git clone "
 alias mirror_web="wget -rmk"
 alias gwd="./gradlew --daemon"
-alias gw="./gradlew --no-daemon"
+alias gw="./gradlew"
 autoload -U promptinit
 promptinit
 
