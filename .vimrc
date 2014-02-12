@@ -52,7 +52,8 @@ autocmd Filetype tex,latex :nnoremap \la :!pdflatex % <CR>
 ""let g:solarized_termtrans=1
 ""colorscheme solarized
 ""colorscheme lucius
-colorscheme jellybeans
+"colorscheme jellybeans
+colorscheme hybrid
 ""colorscheme vydark
 ""colorscheme cleanroom
 ""

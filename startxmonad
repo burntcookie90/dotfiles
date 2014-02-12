@@ -13,8 +13,8 @@ nm-applet &
 sh ~/.fehbg &
 dropbox start &
 xbacklight -set 50 &
-gtk-redshift -l 33.778612:-84.405556& -t 6500:4100
-compton -cb
+gtk-redshift -l 33.778612:-84.405556& -t 6500:5100 &
+compton --vsync opengl -cb
 xmodmap -e "remove Lock = Caps_Lock"
 xmodmap -e "keysym Caps_Lock = Control_L"
 xmodmap -e "add Control = Control_L"

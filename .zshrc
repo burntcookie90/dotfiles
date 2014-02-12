@@ -7,6 +7,7 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="my-afowler"
 
+
 # Example aliases
 say() { if [[ "${1}" =~ -[a-z]{2} ]]; then local lang=${1#-}; local text="${*#$1}"; else local lang=${LANG%_*    }; local text="$*";fi; mplayer "http://translate.google.com/translate_tts?ie=UTF-8&tl=${lang}&q=${text}" &> /    dev/null ; } 
 alias tmux="tmux -2"
@@ -55,6 +56,8 @@ alias transmission="transmission-cli -b -er -u 5"
 alias youtube-mp3="youtube-dl -t --extract-audio --audio-format mp3 --audio-quality 320k"
 alias pathogen="cd ~/.vim/bundle;git clone "
 alias mirror_web="wget -rmk"
+alias gwd="./gradlew --daemon"
+alias gw="./gradlew --no-daemon"
 autoload -U promptinit
 promptinit
 
@@ -105,7 +108,7 @@ export USE_CCACHE=1
 export ECLIPSE_HOME=/usr/share/eclipse
 export ANDROID_HOME=/home/vishnu/android/android-studio/sdk/
 #export PATH=$PATH:$ECLIPSE_HOME
-bindkey -e
+bindkey -v
 bindkey '^R' history-incremental-search-backward
 bindkey "^[[B" history-beginning-search-forward
 bindkey "^[[A" history-beginning-search-backward
