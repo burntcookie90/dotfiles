@@ -47,6 +47,7 @@ filetype indent on
 autocmd Filetype tex,latex :set grepprg=grep\ -nH\ $*
 autocmd Filetype tex,latex :set dictionary=~/.vim/dict/latex.dict
 autocmd Filetype tex,latex :nnoremap \la :!pdflatex % <CR>
+"autocmd BufNewFile,BufReadPost *.ino,*.pde set filetype=cpp
 
 ""coloscheme junk
 ""set background=dark
@@ -105,7 +106,7 @@ let g:Tex_MultipleCompileFormats='pdf'
 let g:tex_flavor='latex'
 autocmd FileType tex setlocal spell spelllang=en_us
 
-set clipboard=unnamed
+"set clipboard=unnamed
 
 
 autocmd FileType c :nnoremap <F5> :!make<CR>
@@ -121,3 +122,6 @@ nmap <F10> :SSave<CR>
 " automatically save and load folds
 au BufWinLeave * silent! mkview
 au BufWinEnter * silent! loadview
+
+" gradle syntax highlighting
+au BufNewFile,BufRead *.gradle set filetype=groovy

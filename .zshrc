@@ -36,6 +36,10 @@ alias sctpush="git tf checkin --no-metadata --deep --no-lock"
 alias :q="exit"
 alias :w="yer not in vim n00b"
 
+#Gradle aliases
+alias gwd="./gradlew --daemon"
+alias gw="./gradlew"
+
 autoload -U promptinit
 promptinit
 
@@ -64,12 +68,15 @@ CASE_SENSITIVE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git adb brew osx github)
+plugins=(vi-mode git adb brew github)
 
 source $ZSH/oh-my-zsh.sh
+#source $HOME/liquidprompt/liquidprompt
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$HOME/Android/sdk/platform-tools:$HOME/Android/sdk/tools:$HOME/Downloads/screenfetch:/usr/local/share/npm/bin:$HOME/bin:$HOME/.cabal/bin
+export PATH=$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$HOME/Android/sdk/platform-tools:$HOME/Android/sdk/tools:$HOME/Downloads/screenfetch:/usr/local/share/npm/bin:$HOME/.cabal/bin
 export PATH=$PATH:/usr/local/Cellar/ruby/2.0.0-p195/bin
+export PATH=$PATH:/Applications/Postgres93.app/Contents/MacOS/bin
+export PATH=$PATH:~/Repos/pidcat
 
 autoload -U compinit
 compinit
@@ -85,7 +92,6 @@ export EDITOR=vim
 export USE_CCACHE=1
 export ANDROID_HOME=/Users/vrajeevan/Android/sdk/
 #export PATH=$PATH:$ECLIPSE_HOME
-bindkey -e
 bindkey '^R' history-incremental-search-backward
 bindkey "^[[B" history-beginning-search-forward
 bindkey "^[[A" history-beginning-search-backward
@@ -108,3 +114,9 @@ setopt share_history # share command history data
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+export PERL_LOCAL_LIB_ROOT="/Users/vrajeevan/perl5:$PERL_LOCAL_LIB_ROOT";
+export PERL_MB_OPT="--install_base "/Users/vrajeevan/perl5"";
+export PERL_MM_OPT="INSTALL_BASE=/Users/vrajeevan/perl5";
+export PERL5LIB="/Users/vrajeevan/perl5/lib/perl5:$PERL5LIB";
+export PATH="/Users/vrajeevan/perl5/bin:$PATH";

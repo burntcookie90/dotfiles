@@ -1,0 +1,7 @@
+xterm*Background:               black
+xterm*Foreground:               green
+xterm*cursorColor:              purple
+xterm*pointerShape:             arrow
+xterm*pointerColor:             red
+xterm*faceName: Monaco
+xterm*faceSize: 9
