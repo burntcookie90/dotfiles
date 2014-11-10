@@ -1,5 +1,17 @@
-"" pathogen
-call pathogen#infect()
+call plug#begin('~/.vim/plugged')
+Plug 'bling/vim-airline'
+Plug 'Townk/vim-autoclose'
+Plug 'kien/ctrlp.vim'
+Plug 'xolox/vim-easytags'
+Plug 'xolox/vim-misc'
+Plug 'sjl/gundo.vim', { 'on': 'GundoToggle' }
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/syntastic'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'garbas/vim-snipmate'
+call plug#end()
 
 syntax on
 set smartindent
@@ -14,6 +26,7 @@ set nowrap
 set ts=4
 set tabstop=4
 set shiftwidth=4
+set expandtab
 
 
 "" show matching brackets (),{},[]
@@ -120,3 +133,6 @@ nmap <F10> :SSave<CR>
 " automatically save and load folds
 au BufWinLeave * silent! mkview
 au BufWinEnter * silent! loadview
+
+" airline
+set laststatus=2

@@ -58,6 +58,7 @@ alias pathogen="cd ~/.vim/bundle;git clone "
 alias mirror_web="wget -rmk"
 alias gwd="./gradlew --daemon"
 alias gw="./gradlew"
+alias pterodactyl="mosh -p 60010 --ssh=\"ssh -p 24\" index.vishnurajeevan.com"
 autoload -U promptinit
 promptinit
 
@@ -85,11 +86,12 @@ CASE_SENSITIVE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git archlinux github)
+plugins=(git git-flow archlinux github)
 
 source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/android-sdk/platform-tools:/opt/android-sdk/tools:/opt/java/bin:/opt/java/db/bin:/opt/java/jre/bin:/usr/bin/vendor_perl:/usr/bin/core_perl:/opt/android-sdk/platform-tools/:/home/vishnu/bin/:/opt/android-sdk/tools/:/usr/share/eclipse:/opt/android-sdk/platform-tools/:/home/vishnu/bin/:/opt/android-sdk/tools/:/usr/share/eclipse:/home/vishnu/.gem/ruby/2.0.0/bin:/home/vishnu/android/android-studio/sdk/platform-tools:/home/vishnu/android/android-studio/sdk/tools
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/java/bin:/opt/java/db/bin:/opt/java/jre/bin:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/vishnu/bin/:/usr/share/eclipse:/home/vishnu/bin/:/usr/share/eclipse:/home/vishnu/.gem/ruby/2.1.0/bin:/home/vishnu/.gem/ruby/2.0.0/bin:/home/vishnu/Android-SDK/platform-tools:/home/vishnu/Android-SDK/tools:/home/vishnu/.cabal/bin
+
 
 autoload -U compinit
 compinit
@@ -113,7 +115,7 @@ bindkey '^R' history-incremental-search-backward
 bindkey "^[[B" history-beginning-search-forward
 bindkey "^[[A" history-beginning-search-backward
 
-alsi -u
+archey3
 sensors | grep temp1
 
 
@@ -130,3 +132,6 @@ setopt hist_ignore_space
 setopt hist_verify
 setopt inc_append_history
 setopt share_history # share command history data
+
+# added by travis gem
+[ -f /home/vishnu/.travis/travis.sh ] && source /home/vishnu/.travis/travis.sh
