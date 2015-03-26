@@ -331,7 +331,7 @@ myManageHook = composeAll
 	, className =? "player" --> doShift "5:vm"
 	, className =? "Eclipse" 		--> doShift "1:dev"
 	, className =? "jetbrains-android-studio"	--> doShift "1:dev"
-	{-, className =? "GMusic_Front" 	--> doFloat-}
+	, className =? "crx_knipolnnllmklapflnccelgolnpehhpl"	--> doFloat
 	, title 	=? "NixNote" 		--> doShift "7"
 	]
 

@@ -1,6 +1,6 @@
 call plug#begin('~/.vim/plugged')
 Plug 'bling/vim-airline'
-Plug 'Townk/vim-autoclose'
+Plug 'Raimondi/delimitMate'
 Plug 'kien/ctrlp.vim'
 Plug 'xolox/vim-easytags'
 Plug 'xolox/vim-misc'
@@ -11,6 +11,7 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'garbas/vim-snipmate'
+Plug 'ryanss/vim-hackernews'
 call plug#end()
 
 syntax on
@@ -60,18 +61,9 @@ autocmd Filetype tex,latex :set grepprg=grep\ -nH\ $*
 autocmd Filetype tex,latex :set dictionary=~/.vim/dict/latex.dict
 autocmd Filetype tex,latex :nnoremap \la :!pdflatex % <CR>
 
-""coloscheme junk
-""set background=dark
-""let g:solarized_termtrans=1
-""colorscheme solarized
-""colorscheme lucius
-"colorscheme jellybeans
 colorscheme hybrid
-""colorscheme vydark
-""colorscheme cleanroom
-""
 
-""pastmode toggle
+""pastemode toggle
 nmap <F4> :set paste!<CR>
 ""tagbar toggler
 nmap <F8> :TagbarToggle<CR>
@@ -85,12 +77,6 @@ nnoremap <F3> :GundoToggle<CR>
 nmap <F2> :NERDTreeToggle<CR>
 let g:NERDChristmasTree = 1
 let g:NERDTreeShowHidden = 1
-
-""system clipboard integration
-""noremap <leader>y "*y
-""noremap <leader>p :set paste<CR>"*p<CR>:set nopaste<CR>
-""noremap <leader>P :set paste<CR>"*P<CR>:set nopaste<CR>
-""vnoremap <leader>y "*ygv
 
 
 ""statusline
@@ -136,3 +122,6 @@ au BufWinEnter * silent! loadview
 
 " airline
 set laststatus=2
+
+" javascript syntax highlighting
+let g:syntastic_javascript_checkers = ['jshint']
