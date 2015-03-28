@@ -6,17 +6,10 @@
 
 xsetroot -cursor_name left_ptr
 /usr/bin/xscreensaver -no-splash &
-trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 4 --transparent true --alpha 0 --tint 0x101112 --height 17 &  
-##wicd-client --tray &
-thunar --daemon &
+trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 4 --transparent true --alpha 0 --tint 0x101112 --height 26 &  
 nm-applet &
 sh ~/.fehbg &
-dropbox start &
+##dropbox start &
 xbacklight -set 50 &
-gtk-redshift -l 33.778612:-84.405556& -t 6500:5100 &
 compton --vsync opengl -cb
-xmodmap -e "remove Lock = Caps_Lock"
-xmodmap -e "keysym Caps_Lock = Control_L"
-xmodmap -e "add Control = Control_L"
-xmodmap -e "keysym Super_L = Caps_Lock"
 exec dbus-launch xmonad

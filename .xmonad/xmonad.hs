@@ -173,10 +173,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 	,((0              , 0x1008ff13), spawn "amixer set Master 2%+")
 
 	-- decrease brightness
-	,((0 			, 0x1008ff03), spawn "xbacklight -dec 10")
+	,((0 			, 0x1008ff03), spawn "xbacklight -dec 5")
 	
 	--inc brightnss
-	,((0 			, 0x1008ff02), spawn "xbacklight -inc 10")
+	,((0 			, 0x1008ff02), spawn "xbacklight -inc 5")
 
 	--take screenshot
 	, ((0              , 0xff61), spawn "import -window root ~/Dropbox/Public/`date '+%Y%m%d-%H%M%S'`.png")
