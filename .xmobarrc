@@ -8,6 +8,7 @@ Config { font = "xft:Inconsolata :size=14:antialias=true"
 	 		, Run Cpu ["-L","3","-H","50","--normal","green","--high","red"] 10  
 			, Run Network "wlan0" ["-L","0","-H","70","--normal","green","--high","red"] 10   
 			, Run Network "eth0" ["-L","0","-H","70","--normal","green","--high","red"] 10   
+			, Run Com "/home/vishnu/dotfiles/backlight.sh" [] "backlight" 10
 			, Run Com "/home/vishnu/dotfiles/battery.sh" [] "battery" 10
 			, Run Memory ["-t","Mem: <usedratio>%"] 10  
 			, Run Com "/home/vishnu/dotfiles/cputemp.sh" [] "temp" 10  
@@ -18,5 +19,5 @@ Config { font = "xft:Inconsolata :size=14:antialias=true"
            ]  
      , sepChar = "%"  
      , alignSep = "}{"  
-     , template = " %StdinReader%}{ <fc=#ffffff> %caps% | Batt: %battery% | %cpu%</fc> <fc=#ffffff> | %memory% | Temp: %temp% C | %wlan0% | Vol: %volume%  </fc> | <fc=#ffffff>%date%</fc> |"  
+     , template = " %StdinReader%}{ <fc=#ffffff> %caps% | Backlight: %backlight% | Batt: %battery% | %cpu%</fc> <fc=#ffffff> | %memory% | Temp: %temp% C | %wlan0% | Vol: %volume%  </fc> | <fc=#ffffff>%date%</fc> |"  
      }  
