@@ -179,14 +179,14 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 	,((0 			, 0x1008ff02), spawn "xbacklight -inc 5")
 
 	--take screenshot
-	, ((0              , 0xff61), spawn "import -window root ~/Dropbox/Public/`date '+%Y%m%d-%H%M%S'`.png")
+    , ((0              , 0xff61), spawn "scrot -s")
 
 	--lock computer
 	, ((0 			, 0x1008ff41), spawn "xscreensaver-command -lock")
 
 
 	--toggle touchpad
-	, ((0 			, 0x1008ff2d), spawn "synclient TouchpadOff=$(synclient -l | grep -c 'TouchpadOff.*=.*0')")
+	, ((0 			, 0x1008ff4a), spawn "synclient TouchpadOff=$(synclient -l | grep -c 'TouchpadOff.*=.*0')")
 
 	-- nuvola previous
 	, ((0 			, 0x1008ff16), spawn "nuvolaplayer-client prev")

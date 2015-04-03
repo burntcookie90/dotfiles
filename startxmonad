@@ -6,7 +6,7 @@
 
 xsetroot -cursor_name left_ptr
 /usr/bin/xscreensaver -no-splash &
-trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 4 --transparent true --alpha 0 --tint 0x101112 --height 26 &  
+trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 4 --transparent true --alpha 0 --tint 0x212121 --height 26 &  
 nm-applet &
 sh ~/.fehbg &
 ##dropbox start &
