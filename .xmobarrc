@@ -15,9 +15,10 @@ Config { font = "xft:Inconsolata :size=14:antialias=true"
 			, Run Date "%a %b %_d %l:%M" "date" 10  
 			, Run Com "/home/vishnu/dotfiles/volume.sh" [] "volume" 10 
 			, Run Com "/home/vishnu/dotfiles/capslock.sh" [] "caps" 10
+			, Run Com "/home/vishnu/dotfiles/touchpad.sh" [] "touchpad" 10
 			, Run StdinReader  
            ]  
      , sepChar = "%"  
      , alignSep = "}{"  
-     , template = " %StdinReader%}{ <fc=#ffffff> %caps% | Backlight: %backlight% | Batt: %battery% | %cpu%</fc> <fc=#ffffff> | %memory% | Temp: %temp% C | %wlan0% | Vol: %volume%  </fc> | <fc=#ffffff>%date%</fc> |"  
+     , template = " %StdinReader%}{ <fc=#ffffff> Touchpad: %touchpad% | %caps% | Backlight: %backlight% | Batt: %battery% | %cpu%</fc> <fc=#ffffff> | %memory% | Temp: %temp% C | %wlan0% | Vol: %volume%  </fc> | <fc=#ffffff>%date%</fc> |"  
      }  
