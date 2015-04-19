@@ -1,4 +1,4 @@
-Config { font = "xft:RobotoLight :size=8:antialias=true"  
+Config { font = "xft:RobotoLight :size=9:antialias=true"  
      , bgColor = "#212121"  
      , fgColor = "#ffffff"  
      , position = TopW L 96
