@@ -5,11 +5,13 @@
 #Executed by startx (run your window manager from here)
 
 xsetroot -cursor_name left_ptr
+xrdb -merge ~/.Xresources
 /usr/bin/xscreensaver -no-splash &
 trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 4 --transparent true --alpha 0 --tint 0x212121 --height 26 &  
 nm-applet &
 sh ~/.fehbg &
 dropbox-cli start &
+redshift-gtk &
 xbacklight -set 50 &
 compton --vsync opengl -cb
 exec dbus-launch xmonad

@@ -192,7 +192,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
 
 	--toggle touchpad
-	, ((0 			, 0x1008ff4a), spawn "synclient TouchpadOff=$(synclient -l | grep -c 'TouchpadOff.*=.*0')")
+	, ((0 			, 0x1008ff4a), spawn "~/dotfiles/touchpad_toggle.sh")
 
 	-- nuvola previous
 	, ((0 			, 0x1008ff16), spawn "nuvolaplayer-client prev")
