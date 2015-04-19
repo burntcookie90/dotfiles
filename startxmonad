@@ -9,7 +9,7 @@ xsetroot -cursor_name left_ptr
 trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 4 --transparent true --alpha 0 --tint 0x212121 --height 26 &  
 nm-applet &
 sh ~/.fehbg &
-##dropbox start &
+dropbox-cli start &
 xbacklight -set 50 &
 compton --vsync opengl -cb
 exec dbus-launch xmonad

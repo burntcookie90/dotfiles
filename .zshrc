@@ -86,11 +86,12 @@ CASE_SENSITIVE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-flow archlinux github)
+plugins=(adb gradle git git-flow archlinux github)
 
 source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/java/bin:/opt/java/db/bin:/opt/java/jre/bin:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/vishnu/bin/:/usr/share/eclipse:/home/vishnu/bin/:/usr/share/eclipse:/home/vishnu/.gem/ruby/2.1.0/bin:/home/vishnu/.gem/ruby/2.0.0/bin:/home/vishnu/Android/Sdk/platform-tools:/home/vishnu/Android/Sdk/tools:/home/vishnu/.cabal/bin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/java/bin:/opt/java/db/bin:/opt/java/jre/bin:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/vishnu/bin/:/usr/share/eclipse:/home/vishnu/bin/:/usr/share/eclipse:/home/vishnu/Android/Sdk/platform-tools:/home/vishnu/Android/Sdk/tools:/home/vishnu/.cabal/bin
+PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 export STUDIO_VM_OPTIONS=/home/vishnu/.AndroidStudio/studio64.vmopions
 
 

@@ -1,4 +1,4 @@
-Config { font = "xft:Inconsolata :size=14:antialias=true"  
+Config { font = "xft:RobotoLight :size=8:antialias=true"  
      , bgColor = "#212121"  
      , fgColor = "#ffffff"  
      , position = TopW L 96
@@ -6,7 +6,6 @@ Config { font = "xft:Inconsolata :size=14:antialias=true"
      , commands = [
 	 		Run Com "~/dmesg.sh" [] "dmesg" 10
 	 		, Run Cpu ["-L","3","-H","50","--normal","green","--high","red"] 10  
-			, Run Network "wlan0" ["-L","0","-H","70","--normal","green","--high","red"] 10   
 			, Run Network "eth0" ["-L","0","-H","70","--normal","green","--high","red"] 10   
 			, Run Com "/home/vishnu/dotfiles/backlight.sh" [] "backlight" 10
 			, Run Com "/home/vishnu/dotfiles/battery.sh" [] "battery" 10
@@ -20,5 +19,5 @@ Config { font = "xft:Inconsolata :size=14:antialias=true"
            ]  
      , sepChar = "%"  
      , alignSep = "}{"  
-     , template = " %StdinReader%}{ <fc=#ffffff> Touchpad: %touchpad% | %caps% | Backlight: %backlight% | Batt: %battery% | %cpu%</fc> <fc=#ffffff> | %memory% | Temp: %temp% C | %wlan0% | Vol: %volume%  </fc> | <fc=#ffffff>%date%</fc> |"  
+     , template = " %StdinReader%}{ <fc=#ffffff> Touchpad: %touchpad% | %caps% | Backlight: %backlight% | Batt: %battery% | %cpu%</fc> <fc=#ffffff> | %memory% | Temp: %temp% C | Vol: %volume%  </fc> | <fc=#ffffff>%date%</fc> |"  
      }  

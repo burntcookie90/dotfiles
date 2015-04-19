@@ -11,6 +11,9 @@ import XMonad
 import Data.Monoid
 
 import System.Exit
+
+import XMonad.Util.Dzen
+
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.EwmhDesktops
@@ -36,6 +39,9 @@ import XMonad.Prompt.AppendFile
 
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
+
+import Data.Map (fromList)
+import Data.Monoid (mappend)
 
 import XMonad.Actions.CycleWS
 
@@ -167,16 +173,16 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 	{-[>-- mute volume<]-}
 	,((0              , 0x1008ff12), spawn "amixer set Master toggle") 
 	{-[>-- lower volume<]-}
-	,((0              , 0x1008ff11), spawn "amixer set Master 2%-")
+	,((0              , 0x1008ff11), spawn "~/dotfiles/decrease_volume.sh" )
 
 	{-[>--raise volume]-}
-	,((0              , 0x1008ff13), spawn "amixer set Master 2%+")
+	,((0              , 0x1008ff13), spawn "~/dotfiles/increase_volume.sh")
 
 	-- decrease brightness
-	,((0 			, 0x1008ff03), spawn "xbacklight -dec 5")
+	,((0 			, 0x1008ff03), spawn "~/dotfiles/decrease_backlight.sh")
 	
 	--inc brightnss
-	,((0 			, 0x1008ff02), spawn "xbacklight -inc 5")
+	,((0 			, 0x1008ff02), spawn "~/dotfiles/increase_backlight.sh")
 
 	--take screenshot
     , ((0              , 0xff61), spawn "scrot -s")
@@ -330,7 +336,7 @@ myManageHook = composeAll
 	, className =? "SmartGit/Hg" --> doShift "3:vcs"
 	, className =? "player" --> doShift "5:vm"
 	, className =? "Eclipse" 		--> doShift "1:dev"
-	, className =? "jetbrains-android-studio"	--> doShift "1:dev"
+	, className =? "jetbrains-studio"	--> doShift "1:dev"
 	, className =? "crx_knipolnnllmklapflnccelgolnpehhpl"	--> doFloat
 	, title 	=? "NixNote" 		--> doShift "7"
 	]
