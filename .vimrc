@@ -1,5 +1,29 @@
 "" pathogen
-call pathogen#infect()
+
+call plug#begin('~/.vim/plugged')
+Plug 'bling/vim-airline'
+Plug 'Townk/vim-autoclose'
+Plug 'kien/ctrlp.vim'
+Plug 'xolox/vim-easytags'
+Plug 'xolox/vim-misc'
+"Plug 'sjl/gundo.vim', { 'on': 'GundoToggle' }
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/syntastic'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'freeo/vim-kalisi'
+"Plug 'garbas/vim-snipmate'
+Plug 'myusuf3/numbers.vim'
+function! BuildComposer(info)
+  if a:info.status != 'unchanged' || a:info.force
+	!cargo build --release
+	UpdateRemotePlugins
+  endif
+endfunction
+
+Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
+call plug#end()
 
 syntax on
 set smartindent
@@ -50,13 +74,14 @@ autocmd Filetype tex,latex :nnoremap \la :!pdflatex % <CR>
 "autocmd BufNewFile,BufReadPost *.ino,*.pde set filetype=cpp
 
 ""coloscheme junk
-""set background=dark
-""let g:solarized_termtrans=1
-""colorscheme solarized
-""colorscheme lucius
+"let g:solarized_termtrans=1
+"colorscheme solarized
+"colorscheme lucius
 colorscheme jellybeans
-""colorscheme vydark
-""colorscheme cleanroom
+"colorscheme vydark
+"colorscheme cleanroom
+"colorscheme kalisi
+set background=dark
 ""
 
 ""pastemode toggle
@@ -125,3 +150,6 @@ au BufWinEnter * silent! loadview
 
 " gradle syntax highlighting
 au BufNewFile,BufRead *.gradle set filetype=groovy
+
+" vim-airline
+set laststatus=2

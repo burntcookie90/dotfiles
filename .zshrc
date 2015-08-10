@@ -6,10 +6,11 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="afowler"
+ZSH_THEME="agnoster-custom"
 
 #aliases
 say() { if [[ "${1}" =~ -[a-z]{2} ]]; then local lang=${1#-}; local text="${*#$1}"; else local lang=${LANG%_*    }; local text="$*";fi; mplayer "http://translate.google.com/translate_tts?ie=UTF-8&tl=${lang}&q=${text}" &> /dev/null ; } 
+alias pterodactyl='mosh -p 60010 --ssh="ssh -p 24 -l vishnu" index.vishnurajeevan.com'
 alias tmux="tmux -2"
 alias pathogen_add="git submodule add "
 alias pathogen_upgrade="git submodule foreach git pull origin master"
@@ -26,20 +27,28 @@ alias grep='grep --color=auto'
 alias pathogen="cd ~/.vim/bundle;git clone "
 alias mirror_web="wget -rmk"
 
-#Scottrade Aliases
-alias sctclonedev="git tf clone --deep  http://fttmfndation001.scottrade.com:8080/tfs $/MobileApp/iOS/Branches/Development"
-alias sctclonerc="git tf clone --deep http://fttmfndation001.scottrade.com:8080/tfs $/MobileApp/iOS/Branches/ReleaseCandidate"
-alias sctcloneandroiddev="git tf clone --deep  http://fttmfndation001.scottrade.com:8080/tfs $/MobileApp/Android/Branches/Development"
-alias sctcloneandroidrc="git tf clone --deep http://fttmfndation001.scottrade.com:8080/tfs $/MobileApp/Android/Branches/ReleaseCandidate"
-alias sctpull="git tf pull --rebase --deep"
-alias sctpush="git tf checkin --no-metadata --deep --no-lock"
+#git-flow aliases
+alias gffs='git-flow feature start'
+alias gfff='git-flow feature finish'
+alias gffp='git-flow feature publish'
+
 alias :q="exit"
 alias :w="yer not in vim n00b"
+alias vim="nvim"
 
 #Gradle aliases
 alias gwd="./gradlew --daemon"
 alias gw="./gradlew"
 
+code () {
+    if [[ $# = 0 ]]
+    then
+        open -a "Visual Studio Code"
+    else
+        [[ $1 = /* ]] && F="$1" || F="$PWD/${1#./}"
+        open -a "Visual Studio Code" --args "$F"
+    fi
+}
 autoload -U promptinit
 promptinit
 
@@ -68,15 +77,18 @@ CASE_SENSITIVE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(vi-mode git adb brew github)
+plugins=(vi-mode git adb brew github gitignore git-flow)
 
 source $ZSH/oh-my-zsh.sh
 #source $HOME/liquidprompt/liquidprompt
 # Customize to your needs...
 export PATH=$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$HOME/Android/sdk/platform-tools:$HOME/Android/sdk/tools:$HOME/Downloads/screenfetch:/usr/local/share/npm/bin:$HOME/.cabal/bin
-export PATH=$PATH:/usr/local/Cellar/ruby/2.0.0-p195/bin
 export PATH=$PATH:/Applications/Postgres93.app/Contents/MacOS/bin
 export PATH=$PATH:~/Repos/pidcat
+export PATH=$PATH:/Users/vrajeevan/Repos/rename
+export PATH=$PATH:/usr/local/Cellar/ruby/2.1.2/bin
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
 
 autoload -U compinit
 compinit
@@ -84,9 +96,6 @@ setopt completealiases
 
 
 #exports
-export BROWSER=chromium
-#export PATH=$PATH:/opt/android-sdk/platform-tools/
-#export PATH=$PATH:/home/vishnu/bin/
 export EDITOR=vim
 #export PATH=$PATH:/opt/android-sdk/tools/
 export USE_CCACHE=1
@@ -120,3 +129,16 @@ export PERL_MB_OPT="--install_base "/Users/vrajeevan/perl5"";
 export PERL_MM_OPT="INSTALL_BASE=/Users/vrajeevan/perl5";
 export PERL5LIB="/Users/vrajeevan/perl5/lib/perl5:$PERL5LIB";
 export PATH="/Users/vrajeevan/perl5/bin:$PATH";
+export KEYTIMEOUT=1
+
+# Use vim cli mode
+
+# ctrl-w removed word backwards
+bindkey '^w' backward-kill-word
+# backspace and ^h working even after
+# returning from command mode
+bindkey '^?' backward-delete-char
+bindkey '^h' backward-delete-char
+
+# OPAM configuration
+. /Users/vrajeevan/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
