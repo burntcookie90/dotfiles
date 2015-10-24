@@ -8,8 +8,19 @@ Plug 'sjl/gundo.vim', { 'on': 'GundoToggle' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'ryanss/vim-hackernews'
+Plug 'alvan/vim-closetag'
+Plug 'gregsexton/MatchTag'
+Plug 'tfnico/vim-gradle'
+Plug 'shime/vim-livedown'
+Plug 'pangloss/vim-javascript'
+function! BuildComposer(info)
+  if a:info.status != 'unchanged' || a:info.force
+    !cargo build --release
+    UpdateRemotePlugins
+  endif
+endfunction
+
+Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
 call plug#end()
 
 syntax on
@@ -123,3 +134,17 @@ set laststatus=2
 
 " javascript syntax highlighting
 let g:syntastic_javascript_checkers = ['jshint']
+
+" closetags
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml"
+
+" should markdown preview get shown automatically upon opening markdown buffer
+let g:livedown_autorun = 0
+
+" should the browser window pop-up upon previewing
+let g:livedown_open = 0 
+
+" the port on which Livedown server will run
+let g:livedown_port = 1337
+
+let g:markdown_composer_browser = "chromium"

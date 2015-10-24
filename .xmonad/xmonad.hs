@@ -188,7 +188,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0              , 0xff61), spawn "scrot -s")
 
 	--lock computer
-	, ((modm .|. shiftMask, xK_l), spawn "xscreensaver-command -lock")
+	, ((modm .|. shiftMask, xK_l), spawn "~/dotfiles/lock.sh")
 
 
 	--toggle touchpad

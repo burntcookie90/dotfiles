@@ -10,6 +10,7 @@ ZSH_THEME="afowler"
 
 # Example aliases
 say() { if [[ "${1}" =~ -[a-z]{2} ]]; then local lang=${1#-}; local text="${*#$1}"; else local lang=${LANG%_*    }; local text="$*";fi; mplayer "http://translate.google.com/translate_tts?ie=UTF-8&tl=${lang}&q=${text}" &> /    dev/null ; } 
+alias vim="nvim"
 alias tmux="tmux -2"
 alias factor_ssh="ssh factor-3210.cc.gatech.edu -l vrajeevan3"
 alias pathogen_add="git submodule add "
@@ -86,7 +87,7 @@ CASE_SENSITIVE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(adb gradle git git-flow archlinux github)
+plugins=(adb gradle git git-flow archlinux github gitignore)
 
 source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
@@ -106,11 +107,11 @@ export BROWSER=chromium
 export LD_LIBRARY_PATH=/home/vishnu/wfdb/lib:/home/vishnu/wfdb/lib64
 #export PATH=$PATH:/opt/android-sdk/platform-tools/
 #export PATH=$PATH:/home/vishnu/bin/
-export EDITOR=vim
+export EDITOR=nvim
 #export PATH=$PATH:/opt/android-sdk/tools/
 export USE_CCACHE=1
 export ECLIPSE_HOME=/usr/share/eclipse
-export ANDROID_HOME=/home/vishnu/android/android-studio/sdk/
+export ANDROID_HOME=/home/vishnu/Android/Sdk
 #export PATH=$PATH:$ECLIPSE_HOME
 bindkey -v
 bindkey '^R' history-incremental-search-backward
