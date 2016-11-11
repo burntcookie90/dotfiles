@@ -63,6 +63,7 @@ autocmd Filetype tex,latex :set grepprg=grep\ -nH\ $*
 autocmd Filetype tex,latex :set dictionary=~/.vim/dict/latex.dict
 autocmd Filetype tex,latex :nnoremap \la :!pdflatex % <CR>
 
+set background=dark
 colorscheme hybrid
 
 ""pastemode toggle
