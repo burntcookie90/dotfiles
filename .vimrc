@@ -11,16 +11,9 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'alvan/vim-closetag'
 Plug 'gregsexton/MatchTag'
 Plug 'tfnico/vim-gradle'
-Plug 'shime/vim-livedown'
 Plug 'pangloss/vim-javascript'
-function! BuildComposer(info)
-  if a:info.status != 'unchanged' || a:info.force
-    !cargo build --release
-    UpdateRemotePlugins
-  endif
-endfunction
-
-Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
+Plug 'w0ng/vim-hybrid'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 syntax on

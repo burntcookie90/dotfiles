@@ -10,7 +10,6 @@ ZSH_THEME="afowler"
 
 # Example aliases
 say() { if [[ "${1}" =~ -[a-z]{2} ]]; then local lang=${1#-}; local text="${*#$1}"; else local lang=${LANG%_*    }; local text="$*";fi; mplayer "http://translate.google.com/translate_tts?ie=UTF-8&tl=${lang}&q=${text}" &> /    dev/null ; } 
-alias vim="nvim"
 alias tmux="tmux -2"
 alias factor_ssh="ssh factor-3210.cc.gatech.edu -l vrajeevan3"
 alias pathogen_add="git submodule add "
@@ -57,7 +56,7 @@ alias transmission="transmission-cli -b -er -u 5"
 alias youtube-mp3="youtube-dl -t --extract-audio --audio-format mp3 --audio-quality 320k"
 alias pathogen="cd ~/.vim/bundle;git clone "
 alias mirror_web="wget -rmk"
-alias gwd="./gradlew --daemon"
+alias gwd="./gradlew --daemon --stacktrace"
 alias gw="./gradlew"
 alias pterodactyl="mosh -p 60010 --ssh=\"ssh -p 24\" index.vishnurajeevan.com"
 autoload -U promptinit
@@ -91,7 +90,7 @@ plugins=(adb gradle git git-flow archlinux github gitignore)
 
 source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/java/bin:/opt/java/db/bin:/opt/java/jre/bin:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/vishnu/bin/:/usr/share/eclipse:/home/vishnu/bin/:/usr/share/eclipse:/home/vishnu/Android/Sdk/platform-tools:/home/vishnu/Android/Sdk/tools:/home/vishnu/.cabal/bin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/java/bin:/opt/java/db/bin:/opt/java/jre/bin:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/vishnu/bin/:/usr/share/eclipse:/home/vishnu/bin/:/usr/share/eclipse:/Users/vishnu/Library/Android/sdk/platform-tools:/Users/vishnu/Library/Android/sdk/tools:/home/vishnu/.cabal/bin
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 export STUDIO_VM_OPTIONS=/home/vishnu/.AndroidStudio/studio64.vmopions
 
@@ -107,19 +106,16 @@ export BROWSER=chromium
 export LD_LIBRARY_PATH=/home/vishnu/wfdb/lib:/home/vishnu/wfdb/lib64
 #export PATH=$PATH:/opt/android-sdk/platform-tools/
 #export PATH=$PATH:/home/vishnu/bin/
-export EDITOR=nvim
+export EDITOR=vim
 #export PATH=$PATH:/opt/android-sdk/tools/
 export USE_CCACHE=1
 export ECLIPSE_HOME=/usr/share/eclipse
-export ANDROID_HOME=/home/vishnu/Android/Sdk
+export ANDROID_HOME=/Users/vishnu/Library/Android/sdk
 #export PATH=$PATH:$ECLIPSE_HOME
 bindkey -v
 bindkey '^R' history-incremental-search-backward
 bindkey "^[[B" history-beginning-search-forward
 bindkey "^[[A" history-beginning-search-backward
-
-archey3
-sensors | grep temp1
 
 
 ## Command history configuration
